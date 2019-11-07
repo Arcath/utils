@@ -1,0 +1,18 @@
+{
+  "name": "@arcath/utils",
+  "version": "0.0.1",
+  "description": "Helpful utility functions, classes and types",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "tsc"
+  },
+  "author": "Adam Laycock <adam@arcath.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  }
+}
