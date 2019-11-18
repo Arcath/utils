@@ -14,6 +14,10 @@ yarn add @arcath/utils
 
 ## Functions
 
+### asyncForEach<T>(array: T[], itterator: (value: T, index: number, array: T[]) => Promise<void>) => Promise<void>
+
+Runs the supplied itterator for each element of the array
+
 ### asyncMap<T, K>(list: T[], executor: (element: T, index: number, array: T[]) => Promise<K>) => Promise<K[]>
 
 As the name implies takes an array and an executor and runs array.map on them. Basically a wrapper for `Promise.all(array.map())`. Types itself properly so it can easily slot into a typescript setup.
