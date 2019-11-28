@@ -1,3 +1,5 @@
+import {minutesInMs} from './time'
+
 const cache: {[key: string]: any} = {}
 
 interface CacheForOptions{
@@ -30,7 +32,7 @@ export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () 
 
     setTimeout(() => {
       delete cache[key]
-    }, (duration ? duration : 30000))
+    }, (duration ? duration : minutesInMs(5)))
   }
 
   return cache[key]
