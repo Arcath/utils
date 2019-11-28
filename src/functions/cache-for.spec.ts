@@ -1,4 +1,4 @@
-import {cacheForSync, cacheFor} from './cache-for'
+import {cacheForSync, cacheFor, expireKey} from './cache-for'
 
 describe('Cache For', () => {
   it('should cache a value syncronously', async () => {
@@ -20,6 +20,12 @@ describe('Cache For', () => {
     await new Promise((resolve) => {
       setTimeout(() => {
         expect(getValue()).toBe(3)
+        expect(getValue()).toBe(3)
+        
+        expireKey(key)
+
+        expect(getValue()).toBe(4)
+
         resolve()
       }, 1500)
     })

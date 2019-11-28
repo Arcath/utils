@@ -35,3 +35,7 @@ export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () 
 
   return cache[key]
 }
+
+export const expireKey = (key: string) => {
+  delete cache[key]
+}
