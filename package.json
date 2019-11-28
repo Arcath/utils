@@ -1,6 +1,6 @@
 {
   "name": "@arcath/utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Helpful utility functions, classes and types",
   "main": "lib/index.js",
   "scripts": {
