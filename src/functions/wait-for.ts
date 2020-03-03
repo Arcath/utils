@@ -1,9 +1,13 @@
+type WaitForResult<T> = 
+  [T, null] |
+  [null, Error]
+
 /**
  * Normalises a promise that errors into an awaitable [result, error] array.
  * 
  * @param promise The resolveable promise
  */
-export const waitFor = async <T>(promise: Promise<T>): Promise<[T, null] | [null, Error]> => {
+export const waitFor = async <T>(promise: Promise<T>): Promise<WaitForResult<T>> => {
   return promise.then((result) => {
     return [result, null] as [T, null]
   }).catch((e) => {
