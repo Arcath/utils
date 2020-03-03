@@ -11,6 +11,7 @@ export {diffArray} from './functions/diff-array'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {mapProperty} from './functions/map-property'
+export {parameterize} from './functions/parameterize'
 export {
   msAsSeconds, msAsMinutes, msAsHour,
   secondsInMs, secondsAsMinutes, secondsAsHours,
