@@ -1,0 +1,351 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Utils</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Utils</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>Utils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#utils" id="utils" style="color: inherit; text-decoration: none;">
+					<h1>Utils</h1>
+				</a>
+				<p>A collection of utility functions bundled into one easy to install library.</p>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
+				</a>
+				<pre><code><span class="hljs-built_in">npm</span> install --save @arcath/utils
+
+<span class="hljs-keyword">or</span>
+
+yarn add @arcath/utils</code></pre>
+				<a href="#functions" id="functions" style="color: inherit; text-decoration: none;">
+					<h2>Functions</h2>
+				</a>
+				<a href="#asyncforeachtarray-t-itterator-value-t-index-number-array-t-gt-promisevoid-gt-promisevoid" id="asyncforeachtarray-t-itterator-value-t-index-number-array-t-gt-promisevoid-gt-promisevoid" style="color: inherit; text-decoration: none;">
+					<h3>asyncForEach<T>(array: T[], itterator: (value: T, index: number, array: T[]) =&gt; Promise<void>) =&gt; Promise<void></h3>
+				</a>
+				<p>Runs the supplied iterator for each element of the array</p>
+				<a href="#asyncmapltt-kgtlist-t-executor-element-t-index-number-array-t-gt-promisek-gt-promiseltkgt" id="asyncmapltt-kgtlist-t-executor-element-t-index-number-array-t-gt-promisek-gt-promiseltkgt" style="color: inherit; text-decoration: none;">
+					<h3>asyncMap&lt;T, K&gt;(list: T[], executor: (element: T, index: number, array: T[]) =&gt; Promise<K>) =&gt; Promise&lt;K[]&gt;</h3>
+				</a>
+				<p>As the name implies takes an array and an executor and runs array.map on them. Basically a wrapper for <code>Promise.all(array.map())</code>. Types itself properly so it can easily slot into a typescript setup.</p>
+				<a href="#cachefortkey-string-duration-number-generator--gt-promiset-gt-promiset" id="cachefortkey-string-duration-number-generator--gt-promiset-gt-promiset" style="color: inherit; text-decoration: none;">
+					<h3>cacheFor<T>({key: string, duration?: number}, generator: () =&gt; Promise<T>) =&gt; Promise<T></h3>
+				</a>
+				<p>Caches the value returned by the generator for the duration seconds supplied in the options.</p>
+				<a href="#cacheforsynctkey-string-duration-number-generator--gt-t-gt-t" id="cacheforsynctkey-string-duration-number-generator--gt-t-gt-t" style="color: inherit; text-decoration: none;">
+					<h3>cacheForSync<T>({key: string, duration?: number}, generator: () =&gt; T) =&gt; T</h3>
+				</a>
+				<p>Synconous <code>cacheFor</code></p>
+				<a href="#diffarraytbase-t-compare-t-gt-additional-t-missing-t" id="diffarraytbase-t-compare-t-gt-additional-t-missing-t" style="color: inherit; text-decoration: none;">
+					<h3>diffArray<T>(base: T[], compare: T[]) =&gt; {additional: T[], missing: T[]}</h3>
+				</a>
+				<p>Takes 2 arrays and compares them. Any elements in the compare array that are not in the base array are put in the <code>additional</code> property and any elements in the base array that are not in the compare array are put into the missing array.</p>
+				<a href="#mappropertyltt-k-extends-keyof-tgtarray-t-property-k-gt-tk" id="mappropertyltt-k-extends-keyof-tgtarray-t-property-k-gt-tk" style="color: inherit; text-decoration: none;">
+					<h3>mapProperty&lt;T, K extends keyof T&gt;(array: T[], property: K) =&gt; T[K][]</h3>
+				</a>
+				<p>Takes an array and maps it to an array of the given property.</p>
+				<a href="#waitfortpromise-promiset-gt-t-null--null--error" id="waitfortpromise-promiset-gt-t-null--null--error" style="color: inherit; text-decoration: none;">
+					<h3>waitFor<T>(promise: Promise<T>) =&gt; [T, null] | [null | Error]</h3>
+				</a>
+				<p>Creates a then/catch on the promise that returns an array. Allows for code to be neater.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> [data, error] = <span class="hljs-keyword">await</span> waitFor(fetchUsers())
+
+<span class="hljs-keyword">if</span>(error){
+  <span class="hljs-keyword">throw</span> error
+}
+
+<span class="hljs-built_in">console</span>.dir(data)</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/bitmask.html" class="tsd-kind-icon">Bit<wbr>Mask</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/cacheforoptions.html" class="tsd-kind-icon">Cache<wbr>For<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/groupedarray.html" class="tsd-kind-icon">Grouped<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/indexedarray.html" class="tsd-kind-icon">Indexed<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/indexedbyoptions.html" class="tsd-kind-icon">Indexed<wbr>ByOptions</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#waitforresult" class="tsd-kind-icon">Wait<wbr>For<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#minute_in_seconds" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#second_in_ms" class="tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#cache" class="tsd-kind-icon">cache</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#emtonumber" class="tsd-kind-icon">em<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hoursinminutes" class="tsd-kind-icon">hours<wbr>InMinutes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hoursinms" class="tsd-kind-icon">hours<wbr>InMs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hoursinseconds" class="tsd-kind-icon">hours<wbr>InSeconds</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#minutesashours" class="tsd-kind-icon">minutes<wbr>AsHours</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#minutesinms" class="tsd-kind-icon">minutes<wbr>InMs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#minutesinseconds" class="tsd-kind-icon">minutes<wbr>InSeconds</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#msashour" class="tsd-kind-icon">ms<wbr>AsHour</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#msasminutes" class="tsd-kind-icon">ms<wbr>AsMinutes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#msasseconds" class="tsd-kind-icon">ms<wbr>AsSeconds</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbertoem" class="tsd-kind-icon">number<wbr>ToEm</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbertopx" class="tsd-kind-icon">number<wbr>ToPx</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbertorem" class="tsd-kind-icon">number<wbr>ToRem</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbertovh" class="tsd-kind-icon">number<wbr>ToVh</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#numbertovw" class="tsd-kind-icon">number<wbr>ToVw</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#pxtonumber" class="tsd-kind-icon">px<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#remtonumber" class="tsd-kind-icon">rem<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#secondsashours" class="tsd-kind-icon">seconds<wbr>AsHours</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#secondsasminutes" class="tsd-kind-icon">seconds<wbr>AsMinutes</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#secondsinms" class="tsd-kind-icon">seconds<wbr>InMs</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#vhtonumber" class="tsd-kind-icon">vh<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#vwtonumber" class="tsd-kind-icon">vw<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#asnumber" class="tsd-kind-icon">as<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#asunit" class="tsd-kind-icon">as<wbr>Unit</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#asyncforeach" class="tsd-kind-icon">async<wbr>For<wbr>Each</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#asyncmap" class="tsd-kind-icon">async<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#cachefor" class="tsd-kind-icon">cache<wbr>For</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#cacheforsync" class="tsd-kind-icon">cache<wbr>For<wbr>Sync</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#chain" class="tsd-kind-icon">chain</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#diffarray" class="tsd-kind-icon">diff<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#divideby" class="tsd-kind-icon">divide<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#expirekey" class="tsd-kind-icon">expire<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#groupedby" class="tsd-kind-icon">grouped<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#indexedby" class="tsd-kind-icon">indexed<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#mapproperty" class="tsd-kind-icon">map<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#multiplyby" class="tsd-kind-icon">multiply<wbr>By</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#parameterize" class="tsd-kind-icon">parameterize</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#waitfor" class="tsd-kind-icon">wait<wbr>For</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

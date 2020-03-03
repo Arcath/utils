@@ -1,8 +1,16 @@
+/**
+ * Bit Masker utility class.
+ */
 export class BitMask<T>{
   /** The current value of the mask */
   value: number
   bits: T[]
 
+  /**
+   * 
+   * @param value The current value of the bit mask, defaults to `0`
+   * @param bits The array of names to use e.g. `['canOpen', 'canClose']`
+   */
   constructor(value: number = 0, bits: T[] = []){
     this.value = value
     this.bits = bits
@@ -24,6 +32,11 @@ export class BitMask<T>{
     }
   }
 
+  /**
+   * Checks the given bit name for its boolean value.
+   * 
+   * @param name The name of the bit to check. e.g. `canOpen`
+   */
   get(name: T){
     let index = this.bits.indexOf(name)
 
@@ -34,6 +47,12 @@ export class BitMask<T>{
     return false
   }
 
+  /**
+   * Sets the given bit to the supplied value.
+   * 
+   * @param name The name of the bit to set e.g. `canClose`
+   * @param value The boolean value to set it to.
+   */
   set(name: T, value: boolean){
     let index = this.bits.indexOf(name)
     
@@ -48,12 +67,20 @@ export class BitMask<T>{
     })
   }
 
+  /**
+   * Returns an array of indexes in the bits array that are currently true.
+   */
   asIndexArray(){
     return this.asArray().map((bit) => {
       return this.bits.indexOf(bit)
     })
   }
 
+  /**
+   * Sets all values in the mask to true if they are in the array and false if they are not.
+   * 
+   * @param indexs An array of indexes in the bits array that need to be true.1
+   */
   fromIndexArray(indexs: number[]){
     this.bits.forEach((bit, index) => {
       if(indexs.indexOf(index) !== -1){

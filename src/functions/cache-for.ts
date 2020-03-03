@@ -10,6 +10,12 @@ interface CacheForOptions{
   duration?: number
 }
 
+/**
+ * A crude caching system that will cache values for the given time.
+ * 
+ * @param options See `CacheForOptions`.
+ * @param generator The promise function that returns the cached value.
+ */
 export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: () => Promise<T>): Promise<T> => {
   if(!cache[key]){
     const value = await generator()

@@ -1,10 +1,12 @@
 import chalk from 'chalk'
 import leftPad from 'left-pad'
 
+/** Logger Class */
 export class Logger{
   serviceName: string
   time: [number, number]
 
+  /** Creates a new logger with the given service name. */
   constructor(serviceName = ''){
     this.serviceName = serviceName
 
