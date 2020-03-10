@@ -18,6 +18,6 @@ export {
   secondsInMs, secondsAsMinutes, secondsAsHours,
   minutesInMs, minutesInSeconds, minutesAsHours,
   hoursInMs, hoursInMinutes, hoursInSeconds,
-  SECOND_IN_MS, MINUTE_IN_SECONDS, HOUR_IN_MINUTES
+  SECOND_IN_MS, MINUTE_IN_SECONDS, MINUTE_IN_MS, HOUR_IN_MINUTES, HOUR_IN_SECONDS, HOUR_IN_MS
 } from './functions/time'
 export {waitFor} from './functions/wait-for'
