@@ -93,6 +93,9 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#hour_in_ms" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#hour_in_seconds" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#minute_in_ms" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#minute_in_seconds" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#second_in_ms" class="tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#cache" class="tsd-kind-icon">cache</a></li>
@@ -158,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">Wait<wbr>For<wbr>Result&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/wait-for.ts#L1">functions/wait-for.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/wait-for.ts#L1">functions/wait-for.ts:1</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -177,7 +180,37 @@
 					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">60</span><span class="tsd-signature-symbol"> = 60</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L22">functions/time.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L26">functions/time.ts:26</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="hour_in_ms" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> HOUR_<wbr>IN_<wbr>MS</h3>
+					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = HOUR_IN_SECONDS * SECOND_IN_MS</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L28">functions/time.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="hour_in_seconds" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> HOUR_<wbr>IN_<wbr>SECONDS</h3>
+					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = HOUR_IN_MINUTES * MINUTE_IN_SECONDS</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L27">functions/time.ts:27</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="minute_in_ms" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MINUTE_<wbr>IN_<wbr>MS</h3>
+					<div class="tsd-signature tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = MINUTE_IN_SECONDS * SECOND_IN_MS</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L24">functions/time.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">60</span><span class="tsd-signature-symbol"> = 60</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L21">functions/time.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L23">functions/time.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +230,7 @@
 					<div class="tsd-signature tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1000</span><span class="tsd-signature-symbol"> = 1000</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L23">functions/time.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L21">functions/time.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -207,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/cache-for.ts#L3">functions/cache-for.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/cache-for.ts#L3">functions/cache-for.ts:3</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -225,7 +258,7 @@
 					<div class="tsd-signature tsd-kind-icon">em<wbr>ToNumber<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asNumber(/^([0-9\.]*?)em$/)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L30">functions/css.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L30">functions/css.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -240,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">hours<wbr>InMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = multiplyBy(HOUR_IN_MINUTES)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L39">functions/time.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L44">functions/time.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -250,7 +283,7 @@
 					<div class="tsd-signature tsd-kind-icon">hours<wbr>InMs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(multiplyBy(HOUR_IN_MINUTES), multiplyBy(MINUTE_IN_SECONDS), multiplyBy(SECOND_IN_MS))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L37">functions/time.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L42">functions/time.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -260,7 +293,7 @@
 					<div class="tsd-signature tsd-kind-icon">hours<wbr>InSeconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(multiplyBy(HOUR_IN_MINUTES), multiplyBy(MINUTE_IN_SECONDS))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L38">functions/time.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L43">functions/time.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -270,7 +303,7 @@
 					<div class="tsd-signature tsd-kind-icon">minutes<wbr>AsHours<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = divideBy(HOUR_IN_MINUTES)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L35">functions/time.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L40">functions/time.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -280,7 +313,7 @@
 					<div class="tsd-signature tsd-kind-icon">minutes<wbr>InMs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(multiplyBy(MINUTE_IN_SECONDS), multiplyBy(SECOND_IN_MS))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L33">functions/time.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L38">functions/time.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -290,7 +323,7 @@
 					<div class="tsd-signature tsd-kind-icon">minutes<wbr>InSeconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = multiplyBy(MINUTE_IN_SECONDS)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L34">functions/time.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L39">functions/time.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -300,7 +333,7 @@
 					<div class="tsd-signature tsd-kind-icon">ms<wbr>AsHour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(divideBy(SECOND_IN_MS), divideBy(MINUTE_IN_SECONDS), divideBy(HOUR_IN_MINUTES))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L27">functions/time.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L32">functions/time.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -310,7 +343,7 @@
 					<div class="tsd-signature tsd-kind-icon">ms<wbr>AsMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(divideBy(SECOND_IN_MS), divideBy(MINUTE_IN_SECONDS))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L26">functions/time.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L31">functions/time.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -320,7 +353,7 @@
 					<div class="tsd-signature tsd-kind-icon">ms<wbr>AsSeconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = divideBy(SECOND_IN_MS)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L25">functions/time.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L30">functions/time.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -330,7 +363,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>ToEm<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asUnit(&#x27;em&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L41">functions/css.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L41">functions/css.ts:41</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -345,7 +378,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>ToPx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asUnit(&#x27;px&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L39">functions/css.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L39">functions/css.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,7 +393,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>ToRem<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asUnit(&#x27;rem&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L43">functions/css.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L43">functions/css.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -375,7 +408,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>ToVh<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asUnit(&#x27;vh&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L45">functions/css.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L45">functions/css.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -390,7 +423,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>ToVw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asUnit(&#x27;vw&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L47">functions/css.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L47">functions/css.ts:47</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -405,7 +438,7 @@
 					<div class="tsd-signature tsd-kind-icon">px<wbr>ToNumber<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asNumber(/^([0-9\.]*?)px$/)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L28">functions/css.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L28">functions/css.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -420,7 +453,7 @@
 					<div class="tsd-signature tsd-kind-icon">rem<wbr>ToNumber<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asNumber(/^([0-9\.]*?)rem$/)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L32">functions/css.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L32">functions/css.ts:32</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -435,7 +468,7 @@
 					<div class="tsd-signature tsd-kind-icon">seconds<wbr>AsHours<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = chain(divideBy(MINUTE_IN_SECONDS), divideBy(HOUR_IN_MINUTES))</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L31">functions/time.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L36">functions/time.ts:36</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -445,7 +478,7 @@
 					<div class="tsd-signature tsd-kind-icon">seconds<wbr>AsMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = divideBy(MINUTE_IN_SECONDS)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L30">functions/time.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L35">functions/time.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -455,7 +488,7 @@
 					<div class="tsd-signature tsd-kind-icon">seconds<wbr>InMs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = multiplyBy(SECOND_IN_MS)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L29">functions/time.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L34">functions/time.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -465,7 +498,7 @@
 					<div class="tsd-signature tsd-kind-icon">vh<wbr>ToNumber<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asNumber(/^([0-9\.]*?)vh$/)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L34">functions/css.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L34">functions/css.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -480,7 +513,7 @@
 					<div class="tsd-signature tsd-kind-icon">vw<wbr>ToNumber<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> = asNumber(/^([0-9\.]*?)vw$/)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L36">functions/css.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L36">functions/css.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -502,7 +535,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L6">functions/css.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L6">functions/css.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -535,7 +568,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/css.ts#L21">functions/css.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/css.ts#L21">functions/css.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -568,7 +601,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/async-for-each.ts#L7">functions/async-for-each.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/async-for-each.ts#L7">functions/async-for-each.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -639,7 +672,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/async-map.ts#L7">functions/async-map.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/async-map.ts#L7">functions/async-map.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -713,7 +746,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/cache-for.ts#L19">functions/cache-for.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/cache-for.ts#L19">functions/cache-for.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -775,7 +808,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/cache-for.ts#L35">functions/cache-for.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/cache-for.ts#L35">functions/cache-for.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -837,7 +870,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L13">functions/time.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L13">functions/time.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -860,7 +893,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/diff-array.ts#L7">functions/diff-array.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/diff-array.ts#L7">functions/diff-array.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -915,7 +948,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L7">functions/time.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L7">functions/time.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -938,7 +971,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/cache-for.ts#L47">functions/cache-for.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/cache-for.ts#L47">functions/cache-for.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -961,7 +994,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/grouped-by.ts#L11">functions/grouped-by.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/grouped-by.ts#L11">functions/grouped-by.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1011,7 +1044,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/indexed-by.ts#L20">functions/indexed-by.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/indexed-by.ts#L20">functions/indexed-by.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1069,7 +1102,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/map-property.ts#L7">functions/map-property.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/map-property.ts#L7">functions/map-property.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1119,7 +1152,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/time.ts#L1">functions/time.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/time.ts#L1">functions/time.ts:1</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1142,7 +1175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/parameterize.ts#L8">functions/parameterize.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/parameterize.ts#L8">functions/parameterize.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1176,7 +1209,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/wait-for.ts#L10">functions/wait-for.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/wait-for.ts#L10">functions/wait-for.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1214,7 +1247,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/indexed-by.ts#L9">functions/indexed-by.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/indexed-by.ts#L9">functions/indexed-by.ts:9</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1223,7 +1256,7 @@
 						<div class="tsd-signature tsd-kind-icon">collide<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Arcath/utils/blob/8fd0b99/src/functions/indexed-by.ts#L10">functions/indexed-by.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/Arcath/utils/blob/374c8c4/src/functions/indexed-by.ts#L10">functions/indexed-by.ts:10</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1263,6 +1296,15 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hour_in_ms" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#hour_in_seconds" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#minute_in_ms" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#minute_in_seconds" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS</a>
