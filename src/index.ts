@@ -13,6 +13,7 @@ export {groupedBy, GroupedArray} from './functions/grouped-by'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {mapProperty} from './functions/map-property'
 export {propIs, propIsNot} from './functions/selectors'
+export {nl2br} from './functions/nl2br'
 export {parameterize} from './functions/parameterize'
 export {
   msAsSeconds, msAsMinutes, msAsHour,
