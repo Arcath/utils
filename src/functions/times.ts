@@ -4,10 +4,13 @@
  * @param number The number of times to itterate
  * @param cb The function to run
  */
-export const times = (number: number, cb: () => void) => {
+export const times = <T>(number: number, cb: (i: number) => T): T[] => {
+  const result: T[] = []
   for(let i = 1; i <= number; i++){
-    cb()
+    result.push(cb(i))
   }
+
+  return result
 }
 
 /**
@@ -16,8 +19,12 @@ export const times = (number: number, cb: () => void) => {
  * @param number The number of times to itterate
  * @param cb The function to run
  */
-export const asyncTimes = async (number: number, cb: () => Promise<void>) => {
+export const asyncTimes = async <T>(number: number, cb: (i: number) => Promise<T>): Promise<T[]> => {
+  const result: T[] = []
+  
   for(let i = 1; i <= number; i++){
-    await cb()
+    result.push(await cb(i))
   }
+
+  return result
 }
