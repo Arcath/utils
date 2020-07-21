@@ -1,11 +1,28 @@
 /**
  * Returns an array of string describing the range.
  * 
- * e.g. `['1-3','5,6','10-15']`
+ * e.g. `['1-3','5,6','10-15','20']`
  * 
  * @param range An array of integers to describe
  */
 export const rangeAsString = (range: number[]): string[] => {
+  const ranges = rangeAsArray(range)
+
+  return ranges.map((range) => {
+    if(range[0] === range[1]) return `${range[0]}`
+    if(range[0] === range[1] - 1) return `${range[0]},${range[1]}`
+    return `${range[0]}-${range[1]}`
+  })
+}
+
+/**
+ * Returns an array of ranges
+ * 
+ * e.g. `[[1,3], [5,6], [10,15], [20,20]]`
+ * 
+ * @param range An array of integers to describe
+ */
+export const rangeAsArray = (range: number[]): [number, number][] => {
   const sorted = range.sort((a, b) => {
     return a - b
   })
@@ -29,9 +46,5 @@ export const rangeAsString = (range: number[]): string[] => {
     return ranges
   }, [] as [number, number][])
 
-  return ranges.map((range) => {
-    if(range[0] === range[1]) return `${range[0]}`
-    if(range[0] === range[1] - 1) return `${range[0]},${range[1]}`
-    return `${range[0]}-${range[1]}`
-  })
+  return ranges
 }
