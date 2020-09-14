@@ -76,44 +76,10 @@
 <span class="hljs-keyword">or</span>
 
 yarn add @arcath/utils</code></pre>
-				<a href="#functions" id="functions" style="color: inherit; text-decoration: none;">
-					<h2>Functions</h2>
+				<a href="#more" id="more" style="color: inherit; text-decoration: none;">
+					<h2>More</h2>
 				</a>
-				<a href="#asyncforeacharray-t-itterator-value-t-index-number-array-t-gt-promise-gt-promise" id="asyncforeacharray-t-itterator-value-t-index-number-array-t-gt-promise-gt-promise" style="color: inherit; text-decoration: none;">
-					<h3>asyncForEach<T>(array: T[], itterator: (value: T, index: number, array: T[]) =&gt; Promise<void>) =&gt; Promise<void></h3>
-				</a>
-				<p>Runs the supplied iterator for each element of the array</p>
-				<a href="#asyncmapltt-kgtlist-t-executor-element-t-index-number-array-t-gt-promise-gt-promiseltkgt" id="asyncmapltt-kgtlist-t-executor-element-t-index-number-array-t-gt-promise-gt-promiseltkgt" style="color: inherit; text-decoration: none;">
-					<h3>asyncMap&lt;T, K&gt;(list: T[], executor: (element: T, index: number, array: T[]) =&gt; Promise<K>) =&gt; Promise&lt;K[]&gt;</h3>
-				</a>
-				<p>As the name implies takes an array and an executor and runs array.map on them. Basically a wrapper for <code>Promise.all(array.map())</code>. Types itself properly so it can easily slot into a typescript setup.</p>
-				<a href="#cacheforkey-string-duration-number-generator--gt-promise-gt-promise" id="cacheforkey-string-duration-number-generator--gt-promise-gt-promise" style="color: inherit; text-decoration: none;">
-					<h3>cacheFor<T>({key: string, duration?: number}, generator: () =&gt; Promise<T>) =&gt; Promise<T></h3>
-				</a>
-				<p>Caches the value returned by the generator for the duration seconds supplied in the options.</p>
-				<a href="#cacheforsynckey-string-duration-number-generator--gt-t-gt-t" id="cacheforsynckey-string-duration-number-generator--gt-t-gt-t" style="color: inherit; text-decoration: none;">
-					<h3>cacheForSync<T>({key: string, duration?: number}, generator: () =&gt; T) =&gt; T</h3>
-				</a>
-				<p>Synconous <code>cacheFor</code></p>
-				<a href="#diffarraybase-t-compare-t-gt-additional-t-missing-t" id="diffarraybase-t-compare-t-gt-additional-t-missing-t" style="color: inherit; text-decoration: none;">
-					<h3>diffArray<T>(base: T[], compare: T[]) =&gt; {additional: T[], missing: T[]}</h3>
-				</a>
-				<p>Takes 2 arrays and compares them. Any elements in the compare array that are not in the base array are put in the <code>additional</code> property and any elements in the base array that are not in the compare array are put into the missing array.</p>
-				<a href="#mappropertyltt-k-extends-keyof-tgtarray-t-property-k-gt-tk" id="mappropertyltt-k-extends-keyof-tgtarray-t-property-k-gt-tk" style="color: inherit; text-decoration: none;">
-					<h3>mapProperty&lt;T, K extends keyof T&gt;(array: T[], property: K) =&gt; T[K][]</h3>
-				</a>
-				<p>Takes an array and maps it to an array of the given property.</p>
-				<a href="#waitforpromise-promise-gt-t-null--null--error" id="waitforpromise-promise-gt-t-null--null--error" style="color: inherit; text-decoration: none;">
-					<h3>waitFor<T>(promise: Promise<T>) =&gt; [T, null] | [null | Error]</h3>
-				</a>
-				<p>Creates a then/catch on the promise that returns an array. Allows for code to be neater.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">const</span> [data, error] = <span class="hljs-keyword">await</span> waitFor(fetchUsers())
-
-<span class="hljs-keyword">if</span>(error){
-  <span class="hljs-keyword">throw</span> error
-}
-
-<span class="hljs-built_in">console</span>.dir(data)</code></pre>
+				<p>A full list of functions and classes can be found at <a href="https://utils.arcath.net">https://utils.arcath.net</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -143,6 +109,9 @@ yarn add @arcath/utils</code></pre>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/indexedbyoptions.html" class="tsd-kind-icon">Indexed<wbr>ByOptions</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/loggeroptions.html" class="tsd-kind-icon">Logger<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#waitforresult" class="tsd-kind-icon">Wait<wbr>For<wbr>Result</a>

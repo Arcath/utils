@@ -1,14 +1,24 @@
 import chalk from 'chalk'
 import leftPad from 'left-pad'
 
+interface LoggerOptions{
+  // If `false` no messages will be logged.
+  output: boolean
+}
+
 /** Logger Class */
 export class Logger{
   serviceName: string
   time: [number, number]
+  options: LoggerOptions
 
   /** Creates a new logger with the given service name. */
-  constructor(serviceName = ''){
+  constructor(serviceName = '', options: Partial<LoggerOptions> = {}){
     this.serviceName = serviceName
+
+    this.options = Object.assign({
+      output: true
+    }, options)
 
     this.time = process.hrtime()
   }
@@ -34,11 +44,11 @@ export class Logger{
   }
 
   log(message: string, timed = false){
-    console.log(this.message(message, chalk.green, timed))
+    if(this.options.output) console.log(this.message(message, chalk.green, timed))
   }
 
   error(message: string, timed = false){
-    console.log(this.message(message, chalk.red, timed))
+    if(this.options.output) console.log(this.message(message, chalk.red, timed))
   }
 
   private timeString(){
