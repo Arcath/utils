@@ -9,6 +9,7 @@ export {
   numberToPx, numberToEm, numberToRem, numberToVh, numberToVw
 } from './functions/css'
 export {diffArray} from './functions/diff-array'
+export {diffObject} from './functions/diff-object'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {mapProperty} from './functions/map-property'

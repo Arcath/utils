@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IndexedByOptions | Utils</title>
+	<title>DiffObjectResult | Utils</title>
 	<meta name="description" content="Documentation for Utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,32 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="indexedbyoptions.html">IndexedByOptions</a>
+					<a href="diffobjectresult.html">DiffObjectResult</a>
 				</li>
 			</ul>
-			<h1>Interface IndexedByOptions</h1>
+			<h1>Interface DiffObjectResult&lt;T, K&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+					<li>
+						<h4>K</h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IndexedByOptions</span>
+						<span class="target">DiffObjectResult</span>
 					</li>
 				</ul>
 			</section>
@@ -81,7 +92,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="indexedbyoptions.html#collide" class="tsd-kind-icon">collide</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="diffobjectresult.html#added" class="tsd-kind-icon">added</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="diffobjectresult.html#changed" class="tsd-kind-icon">changed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="diffobjectresult.html#removed" class="tsd-kind-icon">removed</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,12 +103,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="collide" class="tsd-anchor"></a>
-					<h3>collide</h3>
-					<div class="tsd-signature tsd-kind-icon">collide<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="added" class="tsd-anchor"></a>
+					<h3>added</h3>
+					<div class="tsd-signature tsd-kind-icon">added<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/2ccba96/src/functions/indexed-by.ts#L6">functions/indexed-by.ts:6</a></li>
+							<li>Defined in functions/diff-object.ts:2</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="changed" class="tsd-anchor"></a>
+					<h3>changed</h3>
+					<div class="tsd-signature tsd-kind-icon">changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in functions/diff-object.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="removed" class="tsd-anchor"></a>
+					<h3>removed</h3>
+					<div class="tsd-signature tsd-kind-icon">removed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in functions/diff-object.ts:4</li>
 						</ul>
 					</aside>
 				</section>
@@ -113,11 +146,17 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="indexedbyoptions.html" class="tsd-kind-icon">Indexed<wbr>ByOptions</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="diffobjectresult.html" class="tsd-kind-icon">Diff<wbr>Object<wbr>Result</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="indexedbyoptions.html#collide" class="tsd-kind-icon">collide</a>
+								<a href="diffobjectresult.html#added" class="tsd-kind-icon">added</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="diffobjectresult.html#changed" class="tsd-kind-icon">changed</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="diffobjectresult.html#removed" class="tsd-kind-icon">removed</a>
 							</li>
 						</ul>
 					</li>
