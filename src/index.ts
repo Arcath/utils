@@ -8,6 +8,7 @@ export {
   pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber,
   numberToPx, numberToEm, numberToRem, numberToVh, numberToVw
 } from './functions/css'
+export {DeepPartial, defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
 export {diffObject} from './functions/diff-object'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
