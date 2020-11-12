@@ -34,7 +34,7 @@ export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: (
  */
 export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () => T): T => {
   if(!cacheKeyExists(key)){
-    cacheKey(key, generator())
+    cacheKey(key, () => generator())
 
     setTimeout(() => {
       expireKey(key)
@@ -59,9 +59,9 @@ export const cacheKeyExists = (key: string): boolean => {
  * @param key The key to store.
  * @param value The value to store.
  */
-export const cacheKey = <T>(key: string, value: T): T => {
+export const cacheKey = <T>(key: string, generator: () => T): T => {
   if(!cacheKeyExists(key)){
-    cache[key] = value
+    cache[key] = generator()
   }
 
   return cache[key]

@@ -73,8 +73,8 @@ describe('Cache For', () => {
 
     const firstValue = value()
 
-    const cache = cacheKey('no-duration', firstValue)
-    const newCache = cacheKey('no-duration', value())
+    const cache = cacheKey('no-duration', () => firstValue)
+    const newCache = cacheKey('no-duration', () => value())
 
     expect(cache).toBe(firstValue)
     expect(cache).toBe(newCache)
@@ -84,5 +84,20 @@ describe('Cache For', () => {
     expect(cacheKeyExists('no-duration')).toBe(true)
     resetCache()
     expect(cacheKeyExists('no-duration')).toBe(false)
+  })
+
+  it('should only run the function once', () => {
+    const mockFn = jest
+      .fn()
+      .mockReturnValue(10)
+
+    cacheKey('no-calls', () => mockFn())
+
+    expect(mockFn).toHaveBeenCalled()
+    expect(mockFn).toHaveBeenCalledTimes(1)
+
+    cacheKey('no-calls', () => mockFn())
+
+    expect(mockFn).toHaveBeenCalledTimes(1)
   })
 })
