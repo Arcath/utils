@@ -17,7 +17,7 @@ interface CacheForOptions{
  * @param generator The promise function that returns the cached value.
  */
 export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: () => Promise<T>): Promise<T> => {
-  if(!cache[key]){
+  if(!cacheKeyExists(key)){
     const value = await generator()
 
     return cacheForSync({key, duration}, () => value)
@@ -33,17 +33,45 @@ export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: (
  * @param generator The function that returns the cached value.
  */
 export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () => T): T => {
-  if(!cache[key]){
-    cache[key] = generator()
+  if(!cacheKeyExists(key)){
+    cacheKey(key, generator())
 
     setTimeout(() => {
-      delete cache[key]
+      expireKey(key)
     }, (duration ? duration : minutesInMs(5)))
   }
 
   return cache[key]
 }
 
+/**
+ * Does the supplied key exist in the cache?
+ * 
+ * @param key Key to check.
+ */
+export const cacheKeyExists = (key: string): boolean => {
+  return key in cache
+}
+
+/**
+ * Cache the given value in the supplied key if the key doesn't already exist.
+ * 
+ * @param key The key to store.
+ * @param value The value to store.
+ */
+export const cacheKey = <T>(key: string, value: T): T => {
+  if(!cacheKeyExists(key)){
+    cache[key] = value
+  }
+
+  return cache[key]
+}
+
+/**
+ * Delete the supplied key from the cache.
+ * 
+ * @param key Key to delete.
+ */
 export const expireKey = (key: string) => {
   delete cache[key]
 }

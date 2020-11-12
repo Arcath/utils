@@ -1,4 +1,4 @@
-import {cacheForSync, cacheFor, expireKey} from './cache-for'
+import {cacheForSync, cacheFor, expireKey, cacheKey} from './cache-for'
 
 describe('Cache For', () => {
   it('should cache a value syncronously', async () => {
@@ -64,5 +64,21 @@ describe('Cache For', () => {
     const value = cacheForSync({key: 'tested'}, () => 'test')
 
     expect(value).toBe('test')
+  })
+
+  it('should support durationless caching', () => {
+    const value = () => {
+      return Math.random()
+    }
+
+    const firstValue = value()
+
+    const cache = cacheKey('no-duration', firstValue)
+    const newCache = cacheKey('no-duration', value())
+
+    expect(cache).toBe(firstValue)
+    expect(cache).toBe(newCache)
+
+    expect(value()).not.toBe(firstValue)
   })
 })
