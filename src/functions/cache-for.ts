@@ -50,7 +50,7 @@ export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () 
  * @param key Key to check.
  */
 export const cacheKeyExists = (key: string): boolean => {
-  return key in cache
+  return cache.hasOwnProperty(key)
 }
 
 /**
@@ -74,4 +74,15 @@ export const cacheKey = <T>(key: string, value: T): T => {
  */
 export const expireKey = (key: string) => {
   delete cache[key]
+}
+
+/**
+ * Removes all keys from the cache.
+ */
+export const resetCache = () => {
+  Object.keys(cache).forEach((key) => {
+    if(cacheKeyExists(key)){
+      expireKey(key)
+    }
+  })
 }

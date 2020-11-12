@@ -1,4 +1,4 @@
-import {cacheForSync, cacheFor, expireKey, cacheKey} from './cache-for'
+import {cacheForSync, cacheFor, expireKey, cacheKey, resetCache, cacheKeyExists} from './cache-for'
 
 describe('Cache For', () => {
   it('should cache a value syncronously', async () => {
@@ -80,5 +80,9 @@ describe('Cache For', () => {
     expect(cache).toBe(newCache)
 
     expect(value()).not.toBe(firstValue)
+
+    expect(cacheKeyExists('no-duration')).toBe(true)
+    resetCache()
+    expect(cacheKeyExists('no-duration')).toBe(false)
   })
 })
