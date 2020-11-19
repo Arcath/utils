@@ -19,6 +19,7 @@ export {rangeAsString, rangeAsArray} from './functions/range-as-string'
 export {propIs, propIsNot} from './functions/selectors'
 export {nl2br} from './functions/nl2br'
 export {parameterize} from './functions/parameterize'
+export {pick, ArrayElement} from './functions/pick'
 export {
   msAsSeconds, msAsMinutes, msAsHour,
   secondsInMs, secondsAsMinutes, secondsAsHours,
