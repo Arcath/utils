@@ -14,7 +14,7 @@ export type DeepPartial<T> = {
 export const defaults = <T extends {}>(supplied: DeepPartial<T>, defaultValues: T) => {
   const result: T = Object.assign({}, defaultValues)
 
-  Object.keys(defaultValues).forEach((key) => {
+  Object.keys(supplied).forEach((key) => {
     if(supplied[key]){
 
       if(typeof defaultValues[key] === 'object'){
