@@ -5,11 +5,13 @@ describe('Defaults', () => {
     const defaultOptions = {
       a: 1,
       b: 2,
-      c: 3
+      c: 3,
+      d: true
     }
 
     const options = {
-      b: 20
+      b: 20,
+      d: false
     }
 
     const result = defaults(options, defaultOptions)
@@ -17,6 +19,7 @@ describe('Defaults', () => {
     expect(result.a).toBe(1)
     expect(result.b).toBe(20)
     expect(result.c).toBe(3)
+    expect(result.d).toBe(false)
   })
 
   it('should deep merge', () => {

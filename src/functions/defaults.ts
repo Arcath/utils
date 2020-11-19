@@ -15,16 +15,13 @@ export const defaults = <T extends {}>(supplied: DeepPartial<T>, defaultValues: 
   const result: T = Object.assign({}, defaultValues)
 
   Object.keys(supplied).forEach((key) => {
-    if(supplied[key]){
+    if(typeof defaultValues[key] === 'object'){
+      result[key] = defaults(supplied[key], defaultValues[key])
 
-      if(typeof defaultValues[key] === 'object'){
-        result[key] = defaults(supplied[key], defaultValues[key])
-
-        return
-      }
-
-      result[key] = supplied[key]
+      return
     }
+
+    result[key] = supplied[key]
   })
 
   return result
