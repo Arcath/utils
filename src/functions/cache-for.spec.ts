@@ -17,7 +17,7 @@ describe('Cache For', () => {
     expect(value).toBe(2)
     expect(getValue()).toBe(2)
 
-    await new Promise((resolve) => {
+    await new Promise<number>((resolve) => {
       setTimeout(() => {
         expect(getValue()).toBe(3)
         expect(getValue()).toBe(3)
@@ -26,7 +26,7 @@ describe('Cache For', () => {
 
         expect(getValue()).toBe(4)
 
-        resolve()
+        resolve(1)
       }, 1500)
     })
   })
@@ -50,11 +50,11 @@ describe('Cache For', () => {
     expect(value).toBe(2)
     expect(await getValue()).toBe(2)
 
-    await new Promise((resolve) => {
+    await new Promise<number>((resolve) => {
       setTimeout(() => {
         getValue().then((v) => {
           expect(v).toBe(3)
-          resolve()
+          resolve(1)
         })
       }, 1500)
     })
