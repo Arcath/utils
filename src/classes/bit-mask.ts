@@ -16,11 +16,11 @@ export class BitMask<T>{
     this.bits = bits
   }
 
-  private _get(bit: number){
+  _get(bit: number){
     return !!((1 << bit) & this.value)
   }
 
-  private _set(bit: number, value: boolean){
+  _set(bit: number, value: boolean){
     if(value){
       if(!this._get(bit)){
         this.value = (1 << bit) ^ this.value
