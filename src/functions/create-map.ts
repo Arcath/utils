@@ -1,4 +1,4 @@
-interface Map<T>{
+export interface Map<T>{
   /** Get the value at position X,Y */
   get(x: number, y: number): T
   /** Set the value of X,Y to `value` */

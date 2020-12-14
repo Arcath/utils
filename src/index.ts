@@ -4,6 +4,7 @@ export {Logger} from './classes/logger'
 export {asyncForEach} from './functions/async-for-each'
 export {asyncMap} from './functions/async-map'
 export {cacheFor, cacheForSync, expireKey, cacheKey, cacheKeyExists, resetCache} from './functions/cache-for'
+export {createMap, Map} from './functions/create-map'
 export {
   pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber,
   numberToPx, numberToEm, numberToRem, numberToVh, numberToVw
