@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "prepublishOnly": "tsc",
-    "document": "typedoc --out ./docs --mode file --name Utils && echo utils.arcath.net > ./docs/CNAME"
+    "document": "typedoc --out ./docs --entryPoints src/index.ts --name Utils --readme Readme.md && echo utils.arcath.net > ./docs/CNAME"
   },
   "author": "Adam Laycock <adam@arcath.net>",
   "license": "MIT",
