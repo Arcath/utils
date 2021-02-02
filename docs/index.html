@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for Utils">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,11 +50,6 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
 			<h1>Utils</h1>
 		</div>
 	</div>
@@ -71,11 +65,12 @@
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
-				<pre><code><span class="hljs-built_in">npm</span> install --save @arcath/utils
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">save</span><span style="color: #000000"> @</span><span style="color: #001080">arcath</span><span style="color: #000000">/</span><span style="color: #001080">utils</span>
 
-<span class="hljs-keyword">or</span>
+<span style="color: #001080">or</span>
 
-yarn add @arcath/utils</code></pre>
+<span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">add</span><span style="color: #000000"> @</span><span style="color: #001080">arcath</span><span style="color: #000000">/</span><span style="color: #001080">utils</span>
+</code></pre>
 				<a href="#more" id="more" style="color: inherit; text-decoration: none;">
 					<h2>More</h2>
 				</a>
@@ -85,8 +80,8 @@ yarn add @arcath/utils</code></pre>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
@@ -98,12 +93,6 @@ yarn add @arcath/utils</code></pre>
 					<li class=" tsd-kind-class">
 						<a href="classes/logger.html" class="tsd-kind-icon">Logger</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/cacheforoptions.html" class="tsd-kind-icon">Cache<wbr>For<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/diffobjectresult.html" class="tsd-kind-icon">Diff<wbr>Object<wbr>Result</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/groupedarray.html" class="tsd-kind-icon">Grouped<wbr>Array</a>
 					</li>
@@ -113,206 +102,182 @@ yarn add @arcath/utils</code></pre>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/indexedbyoptions.html" class="tsd-kind-icon">Indexed<wbr>ByOptions</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/loggeroptions.html" class="tsd-kind-icon">Logger<wbr>Options</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/map.html" class="tsd-kind-icon">Map</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#arrayelement" class="tsd-kind-icon">Array<wbr>Element</a>
+						<a href="modules.html#arrayelement" class="tsd-kind-icon">Array<wbr>Element</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#deeppartial" class="tsd-kind-icon">Deep<wbr>Partial</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#waitforresult" class="tsd-kind-icon">Wait<wbr>For<wbr>Result</a>
+						<a href="modules.html#deeppartial" class="tsd-kind-icon">Deep<wbr>Partial</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a>
+						<a href="modules.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#hour_in_ms" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS</a>
+						<a href="modules.html#hour_in_ms" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#hour_in_seconds" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS</a>
+						<a href="modules.html#hour_in_seconds" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#minute_in_ms" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS</a>
+						<a href="modules.html#minute_in_ms" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#minute_in_seconds" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS</a>
+						<a href="modules.html#minute_in_seconds" class="tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#second_in_ms" class="tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS</a>
+						<a href="modules.html#second_in_ms" class="tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#cache" class="tsd-kind-icon">cache</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#asyncforeach" class="tsd-kind-icon">async<wbr>For<wbr>Each</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#emtonumber" class="tsd-kind-icon">em<wbr>ToNumber</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#asyncmap" class="tsd-kind-icon">async<wbr>Map</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#hoursinminutes" class="tsd-kind-icon">hours<wbr>InMinutes</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#asynctimes" class="tsd-kind-icon">async<wbr>Times</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#hoursinms" class="tsd-kind-icon">hours<wbr>InMs</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#cachefor" class="tsd-kind-icon">cache<wbr>For</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#hoursinseconds" class="tsd-kind-icon">hours<wbr>InSeconds</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#cacheforsync" class="tsd-kind-icon">cache<wbr>For<wbr>Sync</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#minutesashours" class="tsd-kind-icon">minutes<wbr>AsHours</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#minutesinms" class="tsd-kind-icon">minutes<wbr>InMs</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#minutesinseconds" class="tsd-kind-icon">minutes<wbr>InSeconds</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#msashour" class="tsd-kind-icon">ms<wbr>AsHour</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#msasminutes" class="tsd-kind-icon">ms<wbr>AsMinutes</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#msasseconds" class="tsd-kind-icon">ms<wbr>AsSeconds</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#numbertoem" class="tsd-kind-icon">number<wbr>ToEm</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#numbertopx" class="tsd-kind-icon">number<wbr>ToPx</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#numbertorem" class="tsd-kind-icon">number<wbr>ToRem</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#numbertovh" class="tsd-kind-icon">number<wbr>ToVh</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#numbertovw" class="tsd-kind-icon">number<wbr>ToVw</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#pxtonumber" class="tsd-kind-icon">px<wbr>ToNumber</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#remtonumber" class="tsd-kind-icon">rem<wbr>ToNumber</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#secondsashours" class="tsd-kind-icon">seconds<wbr>AsHours</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#secondsasminutes" class="tsd-kind-icon">seconds<wbr>AsMinutes</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#secondsinms" class="tsd-kind-icon">seconds<wbr>InMs</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#vhtonumber" class="tsd-kind-icon">vh<wbr>ToNumber</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#vwtonumber" class="tsd-kind-icon">vw<wbr>ToNumber</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#cachekey" class="tsd-kind-icon">cache<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#asnumber" class="tsd-kind-icon">as<wbr>Number</a>
+						<a href="modules.html#cachekeyexists" class="tsd-kind-icon">cache<wbr>Key<wbr>Exists</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#createmap" class="tsd-kind-icon">create<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#defaults" class="tsd-kind-icon">defaults</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#diffarray" class="tsd-kind-icon">diff<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#diffobject" class="tsd-kind-icon">diff<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#asunit" class="tsd-kind-icon">as<wbr>Unit</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#asyncforeach" class="tsd-kind-icon">async<wbr>For<wbr>Each</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#asyncmap" class="tsd-kind-icon">async<wbr>Map</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#asynctimes" class="tsd-kind-icon">async<wbr>Times</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#cachefor" class="tsd-kind-icon">cache<wbr>For</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#cacheforsync" class="tsd-kind-icon">cache<wbr>For<wbr>Sync</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#cachekey" class="tsd-kind-icon">cache<wbr>Key</a>
+						<a href="modules.html#emtonumber" class="tsd-kind-icon">em<wbr>ToNumber</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#cachekeyexists" class="tsd-kind-icon">cache<wbr>Key<wbr>Exists</a>
+						<a href="modules.html#expirekey" class="tsd-kind-icon">expire<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#groupedby" class="tsd-kind-icon">grouped<wbr>By</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#chain" class="tsd-kind-icon">chain</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#createmap" class="tsd-kind-icon">create<wbr>Map</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#defaults" class="tsd-kind-icon">defaults</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#diffarray" class="tsd-kind-icon">diff<wbr>Array</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#diffobject" class="tsd-kind-icon">diff<wbr>Object</a>
+						<a href="modules.html#hoursinminutes" class="tsd-kind-icon">hours<wbr>InMinutes</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#divideby" class="tsd-kind-icon">divide<wbr>By</a>
+						<a href="modules.html#hoursinms" class="tsd-kind-icon">hours<wbr>InMs</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#expirekey" class="tsd-kind-icon">expire<wbr>Key</a>
+						<a href="modules.html#hoursinseconds" class="tsd-kind-icon">hours<wbr>InSeconds</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#groupedby" class="tsd-kind-icon">grouped<wbr>By</a>
+						<a href="modules.html#indexedby" class="tsd-kind-icon">indexed<wbr>By</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#indexedby" class="tsd-kind-icon">indexed<wbr>By</a>
+						<a href="modules.html#keys" class="tsd-kind-icon">keys</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#keys" class="tsd-kind-icon">keys</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#mapproperty" class="tsd-kind-icon">map<wbr>Property</a>
+						<a href="modules.html#mapproperty" class="tsd-kind-icon">map<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#multiplyby" class="tsd-kind-icon">multiply<wbr>By</a>
+						<a href="modules.html#minutesashours" class="tsd-kind-icon">minutes<wbr>AsHours</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#nl2br" class="tsd-kind-icon">nl2br</a>
+						<a href="modules.html#minutesinms" class="tsd-kind-icon">minutes<wbr>InMs</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#parameterize" class="tsd-kind-icon">parameterize</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#pick" class="tsd-kind-icon">pick</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#propis" class="tsd-kind-icon">prop<wbr>Is</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#propisnot" class="tsd-kind-icon">prop<wbr>IsNot</a>
+						<a href="modules.html#minutesinseconds" class="tsd-kind-icon">minutes<wbr>InSeconds</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#rangeasarray" class="tsd-kind-icon">range<wbr>AsArray</a>
+						<a href="modules.html#msashour" class="tsd-kind-icon">ms<wbr>AsHour</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#rangeasstring" class="tsd-kind-icon">range<wbr>AsString</a>
+						<a href="modules.html#msasminutes" class="tsd-kind-icon">ms<wbr>AsMinutes</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#resetcache" class="tsd-kind-icon">reset<wbr>Cache</a>
+						<a href="modules.html#msasseconds" class="tsd-kind-icon">ms<wbr>AsSeconds</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#nl2br" class="tsd-kind-icon">nl2br</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#numbertoem" class="tsd-kind-icon">number<wbr>ToEm</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#numbertopx" class="tsd-kind-icon">number<wbr>ToPx</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#numbertorem" class="tsd-kind-icon">number<wbr>ToRem</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#numbertovh" class="tsd-kind-icon">number<wbr>ToVh</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#numbertovw" class="tsd-kind-icon">number<wbr>ToVw</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#parameterize" class="tsd-kind-icon">parameterize</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#times" class="tsd-kind-icon">times</a>
+						<a href="modules.html#pick" class="tsd-kind-icon">pick</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#valueor" class="tsd-kind-icon">value<wbr>Or</a>
+						<a href="modules.html#propis" class="tsd-kind-icon">prop<wbr>Is</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#waitfor" class="tsd-kind-icon">wait<wbr>For</a>
+						<a href="modules.html#propisnot" class="tsd-kind-icon">prop<wbr>IsNot</a>
 					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#pxtonumber" class="tsd-kind-icon">px<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#rangeasarray" class="tsd-kind-icon">range<wbr>AsArray</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#rangeasstring" class="tsd-kind-icon">range<wbr>AsString</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#remtonumber" class="tsd-kind-icon">rem<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#resetcache" class="tsd-kind-icon">reset<wbr>Cache</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#secondsashours" class="tsd-kind-icon">seconds<wbr>AsHours</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#secondsasminutes" class="tsd-kind-icon">seconds<wbr>AsMinutes</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#secondsinms" class="tsd-kind-icon">seconds<wbr>InMs</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#times" class="tsd-kind-icon">times</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#unique" class="tsd-kind-icon">unique</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#valueor" class="tsd-kind-icon">value<wbr>Or</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#vhtonumber" class="tsd-kind-icon">vh<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#vwtonumber" class="tsd-kind-icon">vw<wbr>ToNumber</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#waitfor" class="tsd-kind-icon">wait<wbr>For</a>
 					</li>
 				</ul>
 			</nav>

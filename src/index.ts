@@ -29,5 +29,6 @@ export {
   SECOND_IN_MS, MINUTE_IN_SECONDS, MINUTE_IN_MS, HOUR_IN_MINUTES, HOUR_IN_SECONDS, HOUR_IN_MS
 } from './functions/time'
 export {times, asyncTimes} from './functions/times'
+export {unique} from './functions/unique'
 export {valueOr} from './functions/value-or'
 export {waitFor} from './functions/wait-for'
