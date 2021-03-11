@@ -4,7 +4,8 @@
  * @param object Any object.
  */
 export const keys = <T extends {}>(object: T): (keyof T)[] => {
-  const keys = Object.keys(object)
+  const objectKeys = Object.keys(object)
 
-  return (keys.filter((key) => object.hasOwnProperty(key)) as any)
+  //eslint-disable-next-line
+  return (objectKeys.filter((key) => object.hasOwnProperty(key)) as any)
 }

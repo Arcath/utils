@@ -16,9 +16,9 @@ describe('Diff Object', () => {
 
     const result = diffObject(a, b)
 
-    expect(result.changed.length).toBe(1)
-    expect(result.added.length).toBe(1)
-    expect(result.removed.length).toBe(1)
+    expect(result.changed).toHaveLength(1)
+    expect(result.added).toHaveLength(1)
+    expect(result.removed).toHaveLength(1)
 
   })
 })

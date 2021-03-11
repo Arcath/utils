@@ -1,3 +1,5 @@
+/* eslint no-bitwise:off */
+
 /**
  * Bit Masker utility class.
  */
@@ -25,10 +27,8 @@ export class BitMask<T>{
       if(!this._get(bit)){
         this.value = (1 << bit) ^ this.value
       }
-    }else{
-      if(this._get(bit)){
-        this.value = (1 << bit) ^ this.value
-      }
+    }else if(this._get(bit)){
+      this.value = (1 << bit) ^ this.value
     }
   }
 
@@ -38,7 +38,7 @@ export class BitMask<T>{
    * @param name The name of the bit to check. e.g. `canOpen`
    */
   get(name: T){
-    let index = this.bits.indexOf(name)
+    const index = this.bits.indexOf(name)
 
     if(index !== -1){
       return this._get(index)
@@ -54,7 +54,7 @@ export class BitMask<T>{
    * @param value The boolean value to set it to.
    */
   set(name: T, value: boolean){
-    let index = this.bits.indexOf(name)
+    const index = this.bits.indexOf(name)
     
     if(index !== -1){
       this._set(index, value)
@@ -83,7 +83,7 @@ export class BitMask<T>{
    */
   fromIndexArray(indexs: number[]){
     this.bits.forEach((bit, index) => {
-      if(indexs.indexOf(index) !== -1){
+      if(indexs.includes(index)){
         this.set(bit, true)
       }else{
         this.set(bit, false)

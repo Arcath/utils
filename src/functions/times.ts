@@ -1,3 +1,5 @@
+import {asyncMap} from './async-map'
+
 /**
  * Repeat the given function `number` times
  * 
@@ -20,11 +22,11 @@ export const times = <T>(number: number, cb: (i: number) => T): T[] => {
  * @param cb The function to run
  */
 export const asyncTimes = async <T>(number: number, cb: (i: number) => Promise<T>): Promise<T[]> => {
-  const result: T[] = []
+  const numbers: number[] = []
   
   for(let i = 1; i <= number; i++){
-    result.push(await cb(i))
+    numbers.push(i)
   }
 
-  return result
+  return asyncMap(numbers, cb)
 }

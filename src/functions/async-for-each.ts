@@ -6,6 +6,7 @@
  */
 export const asyncForEach = async <T>(array: T[], itterator: (value: T, index: number, array: T[]) => Promise<void>): Promise<void> => {
   for(let index =0; index < array.length; index++){
+    //eslint-disable-next-line
     await itterator(array[index], index, array)
   }
 }

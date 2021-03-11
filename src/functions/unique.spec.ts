@@ -11,6 +11,6 @@ describe('Unique', () => {
 
     const uniqueSamples = unique(samples)
 
-    expect(uniqueSamples.length).toBe(samples.length - 1)
+    expect(uniqueSamples).toHaveLength(samples.length - 1)
   })
 })

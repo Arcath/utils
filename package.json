@@ -3,9 +3,11 @@
   "version": "0.7.0",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "kcd-scripts test",
+    "lint": "kcd-scripts lint",
     "prepublishOnly": "tsc",
-    "document": "typedoc --out ./docs --entryPoints src/index.ts --name Utils --readme Readme.md && echo utils.arcath.net > ./docs/CNAME"
+    "document": "typedoc --out ./docs --entryPoints src/index.ts --name Utils --readme Readme.md && echo utils.arcath.net > ./docs/CNAME",
+    "validate": "kcd-scripts validate"
   },
   "author": "Adam Laycock <adam@arcath.net>",
   "license": "MIT",
@@ -15,6 +17,7 @@
     "@types/left-pad": "^1.2.0",
     "@types/node": "^14.14.22",
     "jest": "^26.6.3",
+    "kcd-scripts": "^8.1.0",
     "ts-jest": "^26.5.0",
     "typedoc": "^0.20.20",
     "typescript": "^4.1.3"
@@ -22,5 +25,12 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "left-pad": "^1.3.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off"
+    }
   }
 }

@@ -1,5 +1,6 @@
 import {minutesInMs} from './time'
 
+//eslint-disable-next-line
 const cache: {[key: string]: any} = {}
 
 interface CacheForOptions{
@@ -8,40 +9,6 @@ interface CacheForOptions{
 
   /** How long to cache for, defaults to 5 minutes */
   duration?: number
-}
-
-/**
- * A crude caching system that will cache values for the given time.
- * 
- * @param options See `CacheForOptions`.
- * @param generator The promise function that returns the cached value.
- */
-export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: () => Promise<T>): Promise<T> => {
-  if(!cacheKeyExists(key)){
-    const value = await generator()
-
-    return cacheForSync({key, duration}, () => value)
-  }
-
-  return cache[key]
-}
-
-/**
- * A crude caching system that will cache values for the given time.
- * 
- * @param options See `CacheForOptions`.
- * @param generator The function that returns the cached value.
- */
-export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () => T): T => {
-  if(!cacheKeyExists(key)){
-    cacheKey(key, () => generator())
-
-    setTimeout(() => {
-      expireKey(key)
-    }, (duration ? duration : minutesInMs(5)))
-  }
-
-  return cache[key]
 }
 
 /**
@@ -73,6 +40,7 @@ export const cacheKey = <T>(key: string, generator: () => T): T => {
  * @param key Key to delete.
  */
 export const expireKey = (key: string) => {
+  //eslint-disable-next-line
   delete cache[key]
 }
 
@@ -85,4 +53,38 @@ export const resetCache = () => {
       expireKey(key)
     }
   })
+}
+
+/**
+ * A crude caching system that will cache values for the given time.
+ * 
+ * @param options See `CacheForOptions`.
+ * @param generator The function that returns the cached value.
+ */
+ export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () => T): T => {
+  if(!cacheKeyExists(key)){
+    cacheKey(key, () => generator())
+
+    setTimeout(() => {
+      expireKey(key)
+    }, (duration ? duration : minutesInMs(5)))
+  }
+
+  return cache[key]
+}
+
+/**
+ * A crude caching system that will cache values for the given time.
+ * 
+ * @param options See `CacheForOptions`.
+ * @param generator The promise function that returns the cached value.
+ */
+ export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: () => Promise<T>): Promise<T> => {
+  if(!cacheKeyExists(key)){
+    const value = await generator()
+
+    return cacheForSync({key, duration}, () => value)
+  }
+
+  return cache[key]
 }

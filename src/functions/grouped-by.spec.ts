@@ -19,6 +19,6 @@ describe('Grouped By', () => {
 
     const grouped = groupedBy('age', array)
 
-    expect(grouped[10].length).toBe(2)
+    expect(grouped[10]).toHaveLength(2)
   })
 })

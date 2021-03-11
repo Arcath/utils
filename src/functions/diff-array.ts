@@ -9,11 +9,11 @@ export const diffArray = <T>(original: T[], compare: T[]): {
   missing: T[]
 } => {
   const missing = original.filter((value) => {
-    return compare.indexOf(value) === -1
+    return !compare.includes(value)
   })
 
   const additional = compare.filter((value) => {
-    return original.indexOf(value) === -1
+    return !original.includes(value)
   })
 
   return {

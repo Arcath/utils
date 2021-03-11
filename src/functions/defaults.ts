@@ -12,7 +12,7 @@ export type DeepPartial<T> = {
  * @param defaultValues The default values to fallback on. Should represent a full copy of the options object.
  */
 export const defaults = <T extends {}>(supplied: DeepPartial<T>, defaultValues: T) => {
-  const result: T = Object.assign({}, defaultValues)
+  const result: T = {...defaultValues}
 
   Object.keys(supplied).forEach((key) => {
     if(typeof defaultValues[key] === 'object'){

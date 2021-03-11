@@ -16,7 +16,8 @@
     "jsx": "react",
     "strictPropertyInitialization": false,
     "declaration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strictNullChecks": true
   },
   "compileOnSave": false,
   "include": [
@@ -24,10 +25,10 @@
     "src/**/*.d.ts",
     "src/**/*.tsx"
   ],
-  "exclude": [
-    "lib",
-    "node_modules",
-    "src/**/*.spec.ts",
-    "src/**/*.spec.tsx"
-  ]
+  //"exclude": [
+  //  "lib",
+  //  "node_modules",
+  //  "src/**/*.spec.ts",
+  //  "src/**/*.spec.tsx"
+  //]
 }

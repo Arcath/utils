@@ -10,10 +10,10 @@ describe('Selectors', () => {
 
     const filtered = propIs(items, "name", "Phil")
 
-    expect(filtered.length).toBe(1)
+    expect(filtered).toHaveLength(1)
 
     const notFiltered = propIsNot(items, "name", "Phil")
 
-    expect(notFiltered.length).toBe(2)
+    expect(notFiltered).toHaveLength(2)
   })
 })

@@ -4,11 +4,11 @@ describe('Create Map', () => {
   it('should create a map', () => {
     const t1 = createMap(9, 9, false)
 
-    expect(t1.map.length).toBe(10)
+    expect(t1.map).toHaveLength(10)
 
     const t2 = createMap(9, 9, false, -9, -9)
 
-    expect(t2.map.length).toBe(19)
+    expect(t2.map).toHaveLength(19)
 
     expect(t2.get(-8, 7)).toBe(false)
 

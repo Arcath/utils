@@ -1,6 +1,8 @@
 import chalk from 'chalk'
 import leftPad from 'left-pad'
 
+import {defaults} from '../functions/defaults'
+
 interface LoggerOptions{
   // If `false` no messages will be logged.
   output: boolean
@@ -16,9 +18,9 @@ export class Logger{
   constructor(serviceName = '', options: Partial<LoggerOptions> = {}){
     this.serviceName = serviceName
 
-    this.options = Object.assign({
+    this.options = defaults<LoggerOptions>(options, {
       output: true
-    }, options)
+    })
 
     this.time = process.hrtime()
   }
@@ -35,7 +37,7 @@ export class Logger{
 
     if(timed){
       const diff = process.hrtime(this.time)
-      m += chalk.yellow(' +' + ((diff[0] * 1e9 + diff[1]) / 1e9).toLocaleString('en-GB') + 's')
+      m += chalk.yellow(` +${((diff[0] * 1e9 + diff[1]) / 1e9).toLocaleString('en-GB')}s`)
 
       this.time = process.hrtime()
     }
@@ -52,8 +54,9 @@ export class Logger{
   }
 
   private timeString(){
-    let time = new Date()
+    const time = new Date()
 
+    //eslint-disable-next-line
     return leftPad(time.getDate(), 2, '0')
       + '-'
       + leftPad(time.getMonth(), 2, '0') 

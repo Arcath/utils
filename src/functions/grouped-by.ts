@@ -1,5 +1,5 @@
 export interface GroupedArray<T>{
-  [index: string ]: T[]
+  [index: string]: T[]
 }
 
 /**
@@ -9,13 +9,14 @@ export interface GroupedArray<T>{
  * @param array The array of objects.
  */
 export const groupedBy = <T extends {}, K extends keyof T>(key: K, array: T[]): GroupedArray<T> => {
-  return array.reduce((groups, value) => {
+  return array.reduce<GroupedArray<T>>((groups, value) => {
+    //eslint-disable-next-line
     const k = value[key] as any
 
-    if(!groups[k]) groups[k] = []
+    if(!groups.hasOwnProperty(k)) groups[k] = []
 
     groups[k].push(value)
 
     return groups
-  }, {} as GroupedArray<T>)
+  }, {})
 }

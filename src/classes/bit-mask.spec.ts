@@ -36,11 +36,11 @@ describe('BitMask', () => {
   it('should work with arrays', () => {
     const mask = new BitMask(0, Bits)
 
-    expect(mask.asArray().length).toBe(0)
+    expect(mask.asArray()).toHaveLength(0)
 
     mask.set(READ, true)
 
-    expect(mask.asArray().length).toBe(1)
+    expect(mask.asArray()).toHaveLength(1)
     expect(mask.asIndexArray()).toStrictEqual([0])
 
     const mask2 = new BitMask(0, Bits)

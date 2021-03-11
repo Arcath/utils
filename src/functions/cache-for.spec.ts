@@ -36,7 +36,7 @@ describe('Cache For', () => {
     let n = 1
 
     const getValue = async () => {
-      return await cacheFor({key, duration: 1000}, () => {
+      return cacheFor({key, duration: 1000}, () => {
         return new Promise((resolve) => {
           n += 1
 
@@ -52,6 +52,7 @@ describe('Cache For', () => {
 
     await new Promise<number>((resolve) => {
       setTimeout(() => {
+        //eslint-disable-next-line
         getValue().then((v) => {
           expect(v).toBe(3)
           resolve(1)
@@ -93,7 +94,7 @@ describe('Cache For', () => {
 
     cacheKey('no-calls', () => mockFn())
 
-    expect(mockFn).toHaveBeenCalled()
+    expect(mockFn).toHaveBeenCalledWith()
     expect(mockFn).toHaveBeenCalledTimes(1)
 
     cacheKey('no-calls', () => mockFn())

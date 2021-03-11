@@ -10,6 +10,6 @@ describe('Keys', () => {
 
     const k = keys(sample)
 
-    expect(k.length).toBe(3)
+    expect(k).toHaveLength(3)
   })
 })

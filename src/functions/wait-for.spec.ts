@@ -9,7 +9,7 @@ describe('waitFor', () => {
     const [result, error] = await waitFor(truthy())
 
     if(error){
-      expect(false).toBe(true)
+      throw error
     }
 
     expect(result).toBe(true)

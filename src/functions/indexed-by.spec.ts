@@ -19,12 +19,10 @@ describe('Indexed By', () => {
 
     const byId = indexedBy('id', array)
 
-    expect(byId['abc123'].name).toBe('dave')
+    expect(byId.abc123.name).toBe('dave')
 
     expect(() => {
-      const byName = indexedBy('name', array)
-
-      byName['dave']
+      indexedBy('name', array)
     }).toThrowError('Key bob occurs more than once')
   })
 })

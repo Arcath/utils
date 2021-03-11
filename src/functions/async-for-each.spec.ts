@@ -3,7 +3,7 @@ import {asyncForEach} from './async-for-each'
 describe('Async For Each', () => {
   it('should work async', async () => {
     const array = [1,2,3]
-    let newArray = []
+    const newArray: number[] = []
 
     await asyncForEach(array, (n, i) => {
       return new Promise((resolve) => {

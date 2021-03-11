@@ -44,9 +44,9 @@ export const createMap = <T>(maxX: number, maxY: number, initialValue: T, minX =
     map[translateY(y)][translateX(x)] = value
   }
 
-  const setRange = (minX: number, maxX: number, minY: number, maxY: number, value: T) => {
-    for(let y = minY; y <= maxY; y++){
-      for(let x = minX; x <= maxX; x++){
+  const setRange = (lowX: number, highX: number, lowY: number, highY: number, value: T) => {
+    for(let y = lowY; y <= highY; y++){
+      for(let x = lowX; x <= highX; x++){
         set(x, y, value)
       }
     }
