@@ -49,9 +49,7 @@ export const expireKey = (key: string) => {
  */
 export const resetCache = () => {
   Object.keys(cache).forEach((key) => {
-    if(cacheKeyExists(key)){
-      expireKey(key)
-    }
+    expireKey(key)
   })
 }
 

@@ -1,5 +1,7 @@
 import {cacheForSync, cacheFor, expireKey, cacheKey, resetCache, cacheKeyExists} from './cache-for'
 
+jest.setTimeout(20000)
+
 describe('Cache For', () => {
   it('should cache a value syncronously', async () => {
     const key = 'test'
@@ -27,7 +29,7 @@ describe('Cache For', () => {
         expect(getValue()).toBe(4)
 
         resolve(1)
-      }, 1500)
+      }, 1000)
     })
   })
 
@@ -57,7 +59,7 @@ describe('Cache For', () => {
           expect(v).toBe(3)
           resolve(1)
         })
-      }, 1500)
+      }, 1000)
     })
   })
 

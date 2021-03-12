@@ -14,7 +14,7 @@ export const diffObject = <T extends {}, K extends {}>(original: T, compare: K):
   Object.keys(original).forEach((key) => {
     if(compare.hasOwnProperty(key)){
       // Key from Original exists in Compare
-      if(compare[key] !== original[key]){
+      if((compare as {[key: string]: string})[key] !== (original as {[key: string]: string})[key]){
         //eslint-disable-next-line
         result.changed.push(key as any)
       }
