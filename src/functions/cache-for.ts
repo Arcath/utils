@@ -3,6 +3,8 @@ import {minutesInMs} from './time'
 //eslint-disable-next-line
 const cache: {[key: string]: any} = {}
 
+const timeouts: NodeJS.Timeout[] = []
+
 interface CacheForOptions{
   /** A key to store this value under */
   key: string
@@ -51,6 +53,10 @@ export const resetCache = () => {
   Object.keys(cache).forEach((key) => {
     expireKey(key)
   })
+
+  timeouts.forEach((timeout) => {
+    clearTimeout(timeout)
+  })
 }
 
 /**
@@ -63,9 +69,11 @@ export const resetCache = () => {
   if(!cacheKeyExists(key)){
     cacheKey(key, () => generator())
 
-    setTimeout(() => {
-      expireKey(key)
-    }, (duration ? duration : minutesInMs(5)))
+    timeouts.push(
+      setTimeout(() => {
+        expireKey(key)
+      }, (duration ? duration : minutesInMs(5)))
+    )
   }
 
   return cache[key]
