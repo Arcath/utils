@@ -11,7 +11,7 @@ on:
       - '!all-contributors/**'
   pull_request: {}
 jobs:
-  main:
+  test:
     # ignore all-contributors PRs
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
     strategy:
@@ -44,6 +44,7 @@ jobs:
   release:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: 📚 Build Docs
         run: npm run document
