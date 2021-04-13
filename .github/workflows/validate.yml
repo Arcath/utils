@@ -50,7 +50,3 @@ jobs:
         with:
           branch: gh-pages
           folder: docs
-        on:
-          push:
-            branches:
-              - master
