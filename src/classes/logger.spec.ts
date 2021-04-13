@@ -34,14 +34,14 @@ describe("Logger", () => {
   it("should set a service name", () => {
     console.log = jest.fn()
 
-    const testLogger = new Logger('Test')
+    const testLogger = new Logger('Service')
 
     testLogger.log('test')
 
-    expect((console.log as jest.Mock).mock.calls[0][0]).toMatch(/\[39m\[32m\[Test\]\[39m test/)
+    expect((console.log as jest.Mock).mock.calls[0][0]).toContain("Service")
 
     testLogger.error('error', true)
 
-    expect((console.log as jest.Mock).mock.calls[1][0]).toMatch(/\[39m\[31m\[Test\]\[39m error\[33m \+[.?0-9]*s\[39m/)
+    expect((console.log as jest.Mock).mock.calls[1][0]).toContain("Service")
   })
 })
