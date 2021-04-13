@@ -1,4 +1,4 @@
-import {indexedBy} from './indexed-by'
+import {indexedBy} from '../'
 
 describe('Indexed By', () => {
   it('should produce an index', () => {
@@ -24,5 +24,11 @@ describe('Indexed By', () => {
     expect(() => {
       indexedBy('name', array)
     }).toThrowError('Key bob occurs more than once')
+
+    expect(() => {
+      indexedBy('name', array, {
+        collide: true
+      })
+    }).not.toThrowError('Key bob occurs more than once')
   })
 })

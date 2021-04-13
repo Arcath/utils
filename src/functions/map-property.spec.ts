@@ -1,4 +1,4 @@
-import {mapProperty} from './map-property'
+import {mapProperty} from '../'
 
 describe('Map Property', () => {
   it('should map properties', () => {

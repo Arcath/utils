@@ -1,4 +1,4 @@
-import {diffObject} from './diff-object'
+import {diffObject} from '../'
 
 describe('Diff Object', () => {
   it('should diff two objects', () => {

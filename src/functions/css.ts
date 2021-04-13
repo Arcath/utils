@@ -25,15 +25,15 @@ const asUnit = (unit: string) => {
 }
 
 /** Convert px number to a plain number */
-export const pxToNumber = asNumber(/^([0-9.]*?)px$/)
+export const pxToNumber = asNumber(/^([0-9.]*?) ?px$/)
 /** Convert em number to a plain number */
-export const emToNumber = asNumber(/^([0-9.]*?)em$/)
+export const emToNumber = asNumber(/^([0-9.]*?) ?em$/)
 /** Convert rem number to a plain number */
-export const remToNumber = asNumber(/^([0-9.]*?)rem$/)
+export const remToNumber = asNumber(/^([0-9.]*?) ?rem$/)
 /** Convert vh number to a plain number */
-export const vhToNumber = asNumber(/^([0-9.]*?)vh$/)
+export const vhToNumber = asNumber(/^([0-9.]*?) ?vh$/)
 /** Convert vw number to a plain number */
-export const vwToNumber = asNumber(/^([0-9.]*?)vw$/)
+export const vwToNumber = asNumber(/^([0-9.]*?)? vw$/)
 
 /** Conver a number to px */
 export const numberToPx = asUnit('px')

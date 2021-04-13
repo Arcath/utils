@@ -1,4 +1,4 @@
-import {waitFor} from './wait-for'
+import {waitFor} from '../'
 
 describe('waitFor', () => {
   it('should return T', async () => {

@@ -1,4 +1,4 @@
-import {asyncMap} from './async-map'
+import {asyncMap} from '../'
 
 describe('Async Map', () => {
   it('should work async', async () => {

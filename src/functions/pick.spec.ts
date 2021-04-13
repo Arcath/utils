@@ -1,4 +1,4 @@
-import {pick, omit} from './pick'
+import {pick, omit} from '../'
 
 describe('Pick & Omit', () => {
   it('should pick elements', () => {

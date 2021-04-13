@@ -1,4 +1,4 @@
-import {unique} from './unique'
+import {unique} from '../'
 
 describe('Unique', () => {
   it('should find unique values', () => {

@@ -21,6 +21,7 @@ export const omit = <
   K extends (keyof T)[],
   P extends ArrayElement<K>
 >(object: T, fields: K): Omit<T, P> => {
+  //eslint-disable-next-line
   return keys(object).reduce<any>((obj, field) => {
     if(!fields.includes(field)){
       obj[field] = object[field]

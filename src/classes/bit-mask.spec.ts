@@ -1,4 +1,4 @@
-import {BitMask} from './bit-mask'
+import {BitMask} from '../'
 
 const READ = 'read'
 const WRITE = 'write'
@@ -49,5 +49,18 @@ describe('BitMask', () => {
 
     expect(mask2.get(WRITE)).toBe(true)
     expect(mask2.get(READ)).toBe(false)
+  })
+
+  it('should have default values', () => {
+    const mask = new BitMask()
+
+    expect(mask.value).toBe(0)
+
+    //eslint-disable-next-line
+    expect((mask as any).get('test')).toBe(false);
+
+    //eslint-disable-next-line
+    (mask as any).set('test')
+    expect(mask.value).toBe(0)
   })
 })

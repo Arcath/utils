@@ -1,4 +1,4 @@
-import {nl2br} from './nl2br'
+import {nl2br} from '../'
 
 describe('NL2BR', () => {
   it('should add line breaks', () => {

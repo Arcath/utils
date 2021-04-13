@@ -1,4 +1,4 @@
-import {times, asyncTimes} from './times'
+import {times, asyncTimes} from '../'
 
 describe('Times', () => {
   it('should interate', () => {

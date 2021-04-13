@@ -1,4 +1,4 @@
-import {cacheForSync, cacheFor, expireKey, cacheKey, resetCache, cacheKeyExists} from './cache-for'
+import {cacheForSync, cacheFor, expireKey, cacheKey, resetCache, cacheKeyExists} from '../'
 
 jest.setTimeout(20000)
 
