@@ -39,5 +39,18 @@ jobs:
         env:
           HUSKY_SKIP_INSTALL: true
 
-      - name: ▶️ Run validate script
+      - name: 🧪 Run validate script
         run: npm run validate
+
+      - name: 📚 Build Docs
+        run: npm run document
+      
+      - name: 🚀 Deploy 
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: docs
+        on:
+          push:
+            branches:
+              - master
