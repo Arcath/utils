@@ -41,7 +41,10 @@ jobs:
 
       - name: 🧪 Run validate script
         run: npm run validate
-
+  release:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
       - name: 📚 Build Docs
         run: npm run document
       
