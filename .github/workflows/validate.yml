@@ -46,6 +46,19 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v1
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+
       - name: 📚 Build Docs
         run: npm run document
       
