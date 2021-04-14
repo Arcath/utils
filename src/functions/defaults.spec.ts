@@ -46,4 +46,14 @@ describe('Defaults', () => {
     expect(result.colors.red).toBe('#f00')
     expect(result.build).toBe(true)
   })
+
+  it('should allow supplied to be undefined', () => {
+    const defaultOptions = {
+      test: true
+    }
+
+    const results = defaults(undefined, defaultOptions)
+
+    expect(results.test).toBe(true)
+  })
 })
