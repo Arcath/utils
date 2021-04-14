@@ -14,7 +14,7 @@ export type DeepPartial<T> = {
 export const defaults = <T extends {}>(supplied: DeepPartial<T> | undefined, defaultValues: T) => {
   const result: T = {...defaultValues}
 
-  Object.keys(supplied || {}).forEach((key) => {
+  Object.keys(supplied ?? {}).forEach((key) => {
     if(typeof (defaultValues as {[key: string]: string})[key] === 'object'){
       (result as {[key: string]: string})[key] = defaults(
         //eslint-disable-next-line
