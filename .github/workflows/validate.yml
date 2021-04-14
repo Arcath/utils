@@ -71,6 +71,9 @@ jobs:
           branch: gh-pages
           folder: docs
       
+      - name: 🏗 Build
+        run: npm run build
+
       - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v2
         with:
