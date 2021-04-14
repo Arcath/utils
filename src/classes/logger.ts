@@ -1,5 +1,4 @@
 import chalk from 'chalk'
-import leftPad from 'left-pad'
 
 import {defaults} from '../functions/defaults'
 
@@ -57,16 +56,16 @@ export class Logger{
     const time = new Date()
 
     //eslint-disable-next-line
-    return leftPad(time.getDate(), 2, '0')
+    return time.getDate().toString().padStart(2, '0')
       + '-'
-      + leftPad(time.getMonth(), 2, '0') 
+      + time.getMonth().toString().padStart(2, '0') 
       + '-' 
       + time.getFullYear() 
       + ' ' 
-      + leftPad(time.getHours(), 2, '0')
+      + time.getHours().toString().padStart(2, '0')
       + ':'
-      + leftPad(time.getMinutes(), 2, '0')
+      + time.getMinutes().toString().padStart(2, '0')
       + ':'
-      + leftPad(time.getSeconds(), 2, '0')
+      + time.getSeconds().toString().padStart(2, '0')
   }
 }
