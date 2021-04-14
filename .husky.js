@@ -1,5 +1,1 @@
-module.exports = {
-  hooks: {
-    'pre-commit': 'npm run document && git add -A docs/'
-  }
-}
+module.exports = {}
