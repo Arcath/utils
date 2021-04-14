@@ -71,7 +71,7 @@ jobs:
           branch: gh-pages
           folder: docs
       
-       - name: 🚢 Release
+      - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           semantic_version: 17
