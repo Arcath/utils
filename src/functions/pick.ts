@@ -1,7 +1,13 @@
 import {keys} from './keys'
+import {ArrayElement} from '../types'
 
-export type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType[number]
-
+/**
+ * Pragmatic version of Typescripts `Pick<Object, Fields>
+ * 
+ * @param object The Object to pick fields from.
+ * @param fields An array of fields to pick,
+ * @returns An object with the picked fields.
+ */
 export const pick = <
   T extends {},
   K extends (keyof T)[],
@@ -16,6 +22,13 @@ export const pick = <
   }, {})
 }
 
+/**
+ * Pragmatic version of Typescripts `Omit<Object, Fields>`
+ * 
+ * @param object The object to omit fields from.
+ * @param fields The fields to omit.
+ * @returns An object without the supplied fields.
+ */
 export const omit = <
   T extends {},
   K extends (keyof T)[],

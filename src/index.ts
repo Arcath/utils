@@ -9,7 +9,7 @@ export {
   pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber,
   numberToPx, numberToEm, numberToRem, numberToVh, numberToVw
 } from './functions/css'
-export {DeepPartial, defaults} from './functions/defaults'
+export {defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
 export {diffObject} from './functions/diff-object'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
@@ -20,7 +20,7 @@ export {rangeAsString, rangeAsArray} from './functions/range-as-string'
 export {propIs, propIsNot} from './functions/selectors'
 export {nl2br} from './functions/nl2br'
 export {parameterize} from './functions/parameterize'
-export {pick, ArrayElement, omit} from './functions/pick'
+export {pick, omit} from './functions/pick'
 export {
   msAsSeconds, msAsMinutes, msAsHour,
   secondsInMs, secondsAsMinutes, secondsAsHours,
@@ -32,3 +32,5 @@ export {times, asyncTimes} from './functions/times'
 export {unique} from './functions/unique'
 export {valueOr} from './functions/value-or'
 export {waitFor} from './functions/wait-for'
+
+export {ArrayElement, DeepPartial} from './types'

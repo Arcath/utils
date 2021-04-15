@@ -1,9 +1,4 @@
-/**
- * Works the same as `Partial<T>` except it applies `Partial` to sub elements.
- */
-export type DeepPartial<T> = {
-  [P in keyof T]?: DeepPartial<T[P]>
-}
+import {DeepPartial} from '../types'
 
 /**
  * Deeply applies defaults to an object.
