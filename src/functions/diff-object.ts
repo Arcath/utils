@@ -1,7 +1,7 @@
 interface DiffObjectResult<T, K>{
-  added: (keyof T & keyof K)[],
-  changed: (keyof T & keyof K)[],
-  removed: (keyof T & keyof K)[]
+  added: (keyof K & keyof T)[],
+  changed: (keyof K & keyof T)[],
+  removed: (keyof K & keyof T)[]
 }
 
 export const diffObject = <T extends {}, K extends {}>(original: T, compare: K): DiffObjectResult<T, K> => {

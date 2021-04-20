@@ -5,9 +5,10 @@ const WRITE = 'write'
 const EXECUTE = 'execute'
 
 type Permission = 
+  typeof EXECUTE |
   typeof READ |
-  typeof WRITE |
-  typeof EXECUTE
+  typeof WRITE
+  
 
 const Bits: Permission[] = [
   READ,

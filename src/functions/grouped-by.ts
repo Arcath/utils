@@ -13,6 +13,7 @@ export const groupedBy = <T extends {}, K extends keyof T>(key: K, array: T[]): 
     //eslint-disable-next-line
     const k = value[key] as any
 
+    //eslint-disable-next-line
     if(!groups.hasOwnProperty(k)) groups[k] = []
 
     groups[k].push(value)

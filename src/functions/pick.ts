@@ -1,5 +1,5 @@
-import {keys} from './keys'
 import {ArrayElement} from '../types'
+import {keys} from './keys'
 
 /**
  * Pragmatic version of Typescripts `Pick<Object, Fields>

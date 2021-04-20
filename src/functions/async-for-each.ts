@@ -1,5 +1,5 @@
-import {defaults} from './defaults'
 import {DeepPartial} from '../types'
+import {defaults} from './defaults'
 
 interface AsyncForEachOptions{
   /** Use the legacy style for look for itterations, when false this is a wrapper for `Promise.all`

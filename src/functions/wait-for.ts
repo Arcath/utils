@@ -1,6 +1,6 @@
 type WaitForResult<T> = 
-  [T, null] |
-  [null, Error]
+  [null, Error] |
+  [T, null]
 
 /**
  * Normalises a promise that errors into an awaitable [result, error] array.
