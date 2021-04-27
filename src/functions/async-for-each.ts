@@ -3,7 +3,7 @@ import {defaults} from './defaults'
 
 interface AsyncForEachOptions{
   /** Use the legacy style for look for itterations, when false this is a wrapper for `Promise.all`
-   * The default in 1.x will be to set this to `false`. For 0.x it is `true`
+   * Defaults to `false`
    */
   inSequence: boolean
 }
