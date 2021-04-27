@@ -9,7 +9,7 @@ interface AsyncForEachOptions{
 }
 
 const defaultOptions: AsyncForEachOptions = {
-  inSequence: true
+  inSequence: false
 }
 
 /**
