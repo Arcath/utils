@@ -8,11 +8,11 @@ describe('Selectors', () => {
       {name: 'Phil', age: 30}
     ]
 
-    const filtered = propIs(items, "name", "Phil")
+    const filtered = propIs(items, 'name', 'Phil')
 
     expect(filtered).toHaveLength(1)
 
-    const notFiltered = propIsNot(items, "name", "Phil")
+    const notFiltered = propIsNot(items, 'name', 'Phil')
 
     expect(notFiltered).toHaveLength(2)
   })

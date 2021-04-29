@@ -4,25 +4,16 @@ const READ = 'read'
 const WRITE = 'write'
 const EXECUTE = 'execute'
 
-type Permission = 
-  typeof EXECUTE |
-  typeof READ |
-  typeof WRITE
-  
+type Permission = typeof EXECUTE | typeof READ | typeof WRITE
 
-const Bits: Permission[] = [
-  READ,
-  WRITE,
-  EXECUTE
-]
-
+const Bits: Permission[] = [READ, WRITE, EXECUTE]
 
 describe('BitMask', () => {
   it('should set values', () => {
     const mask = new BitMask(0, Bits)
 
     expect(mask.get(READ)).toBe(false)
-    
+
     mask.set(READ, true)
     mask.set(READ, true)
 
@@ -58,10 +49,10 @@ describe('BitMask', () => {
     expect(mask.value).toBe(0)
 
     //eslint-disable-next-line
-    expect((mask as any).get('test')).toBe(false);
+    expect((mask as any).get('test')).toBe(false)
 
     //eslint-disable-next-line
-    (mask as any).set('test')
+    ;(mask as any).set('test')
     expect(mask.value).toBe(0)
   })
 })

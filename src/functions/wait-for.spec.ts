@@ -8,7 +8,7 @@ describe('waitFor', () => {
 
     const [result, error] = await waitFor(truthy())
 
-    if(error){
+    if (error) {
       throw error
     }
 
@@ -16,7 +16,7 @@ describe('waitFor', () => {
   })
 
   it('should return errors', async () => {
-    const e = new Error("FOO")
+    const e = new Error('FOO')
 
     const errors = async () => {
       throw e

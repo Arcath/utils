@@ -3,11 +3,26 @@ export {Logger} from './classes/logger'
 
 export {asyncForEach} from './functions/async-for-each'
 export {asyncMap} from './functions/async-map'
-export {cacheFor, cacheForSync, expireKey, cacheKey, cacheKeyExists, resetCache} from './functions/cache-for'
+export {
+  cacheFor,
+  cacheForSync,
+  expireKey,
+  cacheKey,
+  cacheKeyExists,
+  resetCache
+} from './functions/cache-for'
 export {createMap, Map} from './functions/create-map'
 export {
-  pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber,
-  numberToPx, numberToEm, numberToRem, numberToVh, numberToVw
+  pxToNumber,
+  emToNumber,
+  remToNumber,
+  vhToNumber,
+  vwToNumber,
+  numberToPx,
+  numberToEm,
+  numberToRem,
+  numberToVh,
+  numberToVw
 } from './functions/css'
 export {defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
@@ -22,11 +37,24 @@ export {nl2br} from './functions/nl2br'
 export {parameterize} from './functions/parameterize'
 export {pick, omit} from './functions/pick'
 export {
-  msAsSeconds, msAsMinutes, msAsHour,
-  secondsInMs, secondsAsMinutes, secondsAsHours,
-  minutesInMs, minutesInSeconds, minutesAsHours,
-  hoursInMs, hoursInMinutes, hoursInSeconds,
-  SECOND_IN_MS, MINUTE_IN_SECONDS, MINUTE_IN_MS, HOUR_IN_MINUTES, HOUR_IN_SECONDS, HOUR_IN_MS
+  msAsSeconds,
+  msAsMinutes,
+  msAsHour,
+  secondsInMs,
+  secondsAsMinutes,
+  secondsAsHours,
+  minutesInMs,
+  minutesInSeconds,
+  minutesAsHours,
+  hoursInMs,
+  hoursInMinutes,
+  hoursInSeconds,
+  SECOND_IN_MS,
+  MINUTE_IN_SECONDS,
+  MINUTE_IN_MS,
+  HOUR_IN_MINUTES,
+  HOUR_IN_SECONDS,
+  HOUR_IN_MS
 } from './functions/time'
 export {times, asyncTimes} from './functions/times'
 export {unique} from './functions/unique'

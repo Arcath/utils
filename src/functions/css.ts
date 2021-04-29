@@ -1,13 +1,13 @@
 /**
  * Creates a function that turns `1unit` into `1`
- * 
+ *
  * @param regex The regex to remove the unit e.g. `/^([0-9\.]*?)px$/`
  */
 const asNumber = (regex: RegExp) => {
   return (unit: string) => {
     const matches = regex.exec(unit)
 
-    if(!matches) return 0
+    if (!matches) return 0
 
     return parseFloat(matches[1])
   }
@@ -15,7 +15,7 @@ const asNumber = (regex: RegExp) => {
 
 /**
  * Creates a function to add a unit to the number.
- * 
+ *
  * @param unit The unit to append.
  */
 const asUnit = (unit: string) => {

@@ -1,25 +1,25 @@
 /* eslint no-control-regex:off */
 import {Logger} from '../'
 
-describe("Logger", () => {
-  it("should log messages", () => {
+describe('Logger', () => {
+  it('should log messages', () => {
     console.log = jest.fn()
 
     const logger = new Logger()
 
     logger.log('foo')
 
-    expect((console.log as jest.Mock).mock.calls[0][0]).toContain("foo")
+    expect((console.log as jest.Mock).mock.calls[0][0]).toContain('foo')
 
     logger.log('bar', true)
 
-    expect((console.log as jest.Mock).mock.calls[1][0]).toContain("bar")
+    expect((console.log as jest.Mock).mock.calls[1][0]).toContain('bar')
 
     logger.error('widget')
 
-    expect((console.log as jest.Mock).mock.calls[2][0]).toContain("widget")
+    expect((console.log as jest.Mock).mock.calls[2][0]).toContain('widget')
 
-    const disabledLogger = new Logger('test', { output: false })
+    const disabledLogger = new Logger('test', {output: false})
 
     disabledLogger.log('nope')
 
@@ -31,17 +31,17 @@ describe("Logger", () => {
     expect((console.log as jest.Mock).mock.calls).toHaveLength(3)
   })
 
-  it("should set a service name", () => {
+  it('should set a service name', () => {
     console.log = jest.fn()
 
     const testLogger = new Logger('Service')
 
     testLogger.log('test')
 
-    expect((console.log as jest.Mock).mock.calls[0][0]).toContain("Service")
+    expect((console.log as jest.Mock).mock.calls[0][0]).toContain('Service')
 
     testLogger.error('error', true)
 
-    expect((console.log as jest.Mock).mock.calls[1][0]).toContain("Service")
+    expect((console.log as jest.Mock).mock.calls[1][0]).toContain('Service')
   })
 })

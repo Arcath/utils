@@ -18,6 +18,6 @@ describe('Create Map', () => {
 
     t2.setRange(2, 4, 2, 4, true)
 
-    expect(t2.get(3,4)).toBe(true)
+    expect(t2.get(3, 4)).toBe(true)
   })
 })

@@ -5,7 +5,7 @@ const cache: {[key: string]: any} = {}
 
 const timeouts: NodeJS.Timeout[] = []
 
-interface CacheForOptions{
+interface CacheForOptions {
   /** A key to store this value under */
   key: string
 
@@ -15,7 +15,7 @@ interface CacheForOptions{
 
 /**
  * Does the supplied key exist in the cache?
- * 
+ *
  * @param key Key to check.
  */
 export const cacheKeyExists = (key: string): boolean => {
@@ -24,12 +24,12 @@ export const cacheKeyExists = (key: string): boolean => {
 
 /**
  * Cache the given value in the supplied key if the key doesn't already exist.
- * 
+ *
  * @param key The key to store.
  * @param value The value to store.
  */
 export const cacheKey = <T>(key: string, generator: () => T): T => {
-  if(!cacheKeyExists(key)){
+  if (!cacheKeyExists(key)) {
     cache[key] = generator()
   }
 
@@ -38,7 +38,7 @@ export const cacheKey = <T>(key: string, generator: () => T): T => {
 
 /**
  * Delete the supplied key from the cache.
- * 
+ *
  * @param key Key to delete.
  */
 export const expireKey = (key: string) => {
@@ -50,29 +50,35 @@ export const expireKey = (key: string) => {
  * Removes all keys from the cache.
  */
 export const resetCache = () => {
-  Object.keys(cache).forEach((key) => {
+  Object.keys(cache).forEach(key => {
     expireKey(key)
   })
 
-  timeouts.forEach((timeout) => {
+  timeouts.forEach(timeout => {
     clearTimeout(timeout)
   })
 }
 
 /**
  * A crude caching system that will cache values for the given time.
- * 
+ *
  * @param options See `CacheForOptions`.
  * @param generator The function that returns the cached value.
  */
- export const cacheForSync = <T>({key, duration}: CacheForOptions, generator: () => T): T => {
-  if(!cacheKeyExists(key)){
+export const cacheForSync = <T>(
+  {key, duration}: CacheForOptions,
+  generator: () => T
+): T => {
+  if (!cacheKeyExists(key)) {
     cacheKey(key, () => generator())
 
     timeouts.push(
-      setTimeout(() => {
-        expireKey(key)
-      }, (duration ? duration : minutesInMs(5)))
+      setTimeout(
+        () => {
+          expireKey(key)
+        },
+        duration ? duration : minutesInMs(5)
+      )
     )
   }
 
@@ -81,12 +87,15 @@ export const resetCache = () => {
 
 /**
  * A crude caching system that will cache values for the given time.
- * 
+ *
  * @param options See `CacheForOptions`.
  * @param generator The promise function that returns the cached value.
  */
- export const cacheFor = async <T>({key, duration}: CacheForOptions, generator: () => Promise<T>): Promise<T> => {
-  if(!cacheKeyExists(key)){
+export const cacheFor = async <T>(
+  {key, duration}: CacheForOptions,
+  generator: () => Promise<T>
+): Promise<T> => {
+  if (!cacheKeyExists(key)) {
     const value = await generator()
 
     return cacheForSync({key, duration}, () => value)

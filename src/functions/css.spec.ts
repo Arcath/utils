@@ -1,5 +1,15 @@
-import {pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber,
-  numberToPx, numberToEm, numberToRem, numberToVh, numberToVw} from '../'
+import {
+  pxToNumber,
+  emToNumber,
+  remToNumber,
+  vhToNumber,
+  vwToNumber,
+  numberToPx,
+  numberToEm,
+  numberToRem,
+  numberToVh,
+  numberToVw
+} from '../'
 
 describe('CSS', () => {
   it('should conver units to numbers', () => {
@@ -18,6 +28,5 @@ describe('CSS', () => {
     expect(numberToRem(90)).toBe('90rem')
     expect(numberToVh(56)).toBe('56vh')
     expect(numberToVw(32)).toBe('32vw')
-
   })
 })

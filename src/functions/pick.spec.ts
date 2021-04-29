@@ -8,13 +8,13 @@ describe('Pick & Omit', () => {
       c: 3
     }
 
-    const picked = pick(o, ["a"])
+    const picked = pick(o, ['a'])
 
     expect(picked).toHaveProperty('a')
     expect(picked).not.toHaveProperty('b')
     expect(picked.a).toBe(1)
 
-    const omitted = omit(o, ["a"])
+    const omitted = omit(o, ['a'])
 
     expect(omitted).toHaveProperty('b')
     expect(omitted).not.toHaveProperty('a')

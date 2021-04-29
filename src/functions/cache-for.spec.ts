@@ -1,4 +1,11 @@
-import {cacheForSync, cacheFor, expireKey, cacheKey, resetCache, cacheKeyExists} from '../'
+import {
+  cacheForSync,
+  cacheFor,
+  expireKey,
+  cacheKey,
+  resetCache,
+  cacheKeyExists
+} from '../'
 
 jest.setTimeout(20000)
 
@@ -19,11 +26,11 @@ describe('Cache For', () => {
     expect(value).toBe(2)
     expect(getValue()).toBe(2)
 
-    await new Promise<number>((resolve) => {
+    await new Promise<number>(resolve => {
       setTimeout(() => {
         expect(getValue()).toBe(3)
         expect(getValue()).toBe(3)
-        
+
         expireKey(key)
 
         expect(getValue()).toBe(4)
@@ -34,12 +41,12 @@ describe('Cache For', () => {
   })
 
   it('should cache a value asyncrousnly', async () => {
-    const key = "testing"
+    const key = 'testing'
     let n = 1
 
     const getValue = async () => {
       return cacheFor({key, duration: 1000}, () => {
-        return new Promise((resolve) => {
+        return new Promise(resolve => {
           n += 1
 
           resolve(n)
@@ -52,10 +59,10 @@ describe('Cache For', () => {
     expect(value).toBe(2)
     expect(await getValue()).toBe(2)
 
-    await new Promise<number>((resolve) => {
+    await new Promise<number>(resolve => {
       setTimeout(() => {
         //eslint-disable-next-line
-        getValue().then((v) => {
+        getValue().then(v => {
           expect(v).toBe(3)
           resolve(1)
         })
@@ -90,9 +97,7 @@ describe('Cache For', () => {
   })
 
   it('should only run the function once', () => {
-    const mockFn = jest
-      .fn()
-      .mockReturnValue(10)
+    const mockFn = jest.fn().mockReturnValue(10)
 
     cacheKey('no-calls', () => mockFn())
 
