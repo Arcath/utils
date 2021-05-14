@@ -24,6 +24,7 @@ export {
   numberToVh,
   numberToVw
 } from './functions/css'
+export {deepIncludesArray} from './functions/deep-includes'
 export {defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
 export {diffObject} from './functions/diff-object'
