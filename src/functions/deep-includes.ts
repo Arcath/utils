@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-explicit-any:off */
+
 /**
  * Check if an array exists inside an array
  *
