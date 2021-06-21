@@ -7,11 +7,14 @@
  * @param check The function to check the array entries with
  * @returns `true` if `check` only ever returned `true`, otherwise `false`
  */
-export const reduceTruthy = <T>(array: T[], check: (entry: T) => boolean) => {
-  return array.reduce((result, entry) => {
+export const reduceTruthy = <T>(
+  array: T[],
+  check: (entry: T, i: number) => boolean
+) => {
+  return array.reduce((result, entry, i) => {
     if (!result) return false
 
-    return check(entry)
+    return check(entry, i)
   }, true)
 }
 
@@ -24,6 +27,9 @@ export const reduceTruthy = <T>(array: T[], check: (entry: T) => boolean) => {
  * @param check The function to check the array entries with
  * @returns `true` if `check` only ever returned `false`, otherwise `false`
  */
-export const reduceFalsy = <T>(array: T[], check: (entry: T) => boolean) => {
-  return reduceTruthy(array, e => !check(e))
+export const reduceFalsy = <T>(
+  array: T[],
+  check: (entry: T, i: number) => boolean
+) => {
+  return reduceTruthy(array, (e, i) => !check(e, i))
 }
