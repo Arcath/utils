@@ -27,7 +27,7 @@ export const asyncForEach = async <T>(
 
   if (inSequence) {
     console.warn(
-      'in sequence is going to be removed in the future, for 0.x it is default on, soon it will change to default off.'
+      'in sequence is going to be removed in the future, for 1.x it is default off.'
     )
     for (let index = 0; index < array.length; index++) {
       //eslint-disable-next-line
@@ -37,11 +37,9 @@ export const asyncForEach = async <T>(
     return
   }
 
-  const promises: Promise<void>[] = []
-
-  array.forEach((value, index, arr) => {
-    promises.push(itterator(value, index, arr))
-  })
+  const promises = array.map((value, index, arr) =>
+    itterator(value, index, arr)
+  )
 
   await Promise.all(promises)
 }
