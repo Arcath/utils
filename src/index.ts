@@ -29,6 +29,7 @@ export {defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
 export {diffObject} from './functions/diff-object'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
+export {ifFn} from './functions/if-fn'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {keys} from './functions/keys'
 export {mapProperty} from './functions/map-property'
@@ -37,6 +38,14 @@ export {reduceTruthy, reduceFalsy} from './functions/reduce'
 export {replaceProperty} from './functions/replace-property'
 export {propIs, propIsNot} from './functions/selectors'
 export {nl2br} from './functions/nl2br'
+export {
+  getPackage,
+  hasDependency,
+  hasDevDependency,
+  hasPeerDependency,
+  hasAnyDependency,
+  hasScript
+} from './functions/package'
 export {parameterize} from './functions/parameterize'
 export {pick, omit} from './functions/pick'
 export {

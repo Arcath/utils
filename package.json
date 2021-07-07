@@ -16,16 +16,17 @@
     "@types/chalk": "^2.2.0",
     "@types/jest": "^26.0.23",
     "@types/left-pad": "^1.2.0",
-    "@types/node": "^15.12.4",
-    "jest": "^27.0.4",
+    "@types/node": "^16.0.0",
+    "jest": "^27.0.6",
     "kcd-scripts": "^11.1.0",
-    "prettier": "^2.3.1",
+    "prettier": "^2.3.2",
     "ts-jest": "^27.0.3",
-    "typedoc": "^0.21.0",
-    "typescript": "^4.3.4"
+    "typedoc": "^0.21.2",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.1",
+    "read-pkg-up": "^7.0.1"
   },
   "eslintConfig": {
     "extends": "./node_modules/kcd-scripts/eslint.js",
