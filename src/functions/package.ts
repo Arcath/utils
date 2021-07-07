@@ -83,14 +83,12 @@ export const hasScript = (
  * @param options An instance of `PackageOptions` (Optional)
  * @returns
  */
-export const getPackage = async (
-  options?: Partial<PackageOptions>
-): Promise<Package> => {
+export const getPackage = (options?: Partial<PackageOptions>): Package => {
   const {cwd} = defaults(options, {
     cwd: process.cwd()
   })
 
-  const result = await readPkg({cwd})
+  const result = readPkg.sync({cwd})
 
   if (typeof result === 'undefined') {
     throw new Error('Could not find package.json')

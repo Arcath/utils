@@ -11,7 +11,7 @@ import {
 } from '../index'
 
 describe('Package Fns', () => {
-  it('should get the package', async () => {
+  it('should get the package', () => {
     const {
       pkg,
       pkgPath,
@@ -25,12 +25,12 @@ describe('Package Fns', () => {
       ifAnyDependency,
       hasScript,
       ifScript
-    } = await getPackage()
+    } = getPackage()
 
     expect(pkg.name).toBe('@arcath/utils')
     expect(pkgPath).toBe(path.join(process.cwd(), 'package.json'))
 
-    await expect(getPackage({cwd: '/fake/does/not/exist'})).rejects.toThrow(
+    expect(() => getPackage({cwd: '/fake/does/not/exist'})).toThrow(
       'Could not find package.json'
     )
 
