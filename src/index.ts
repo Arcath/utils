@@ -34,7 +34,12 @@ export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {keys} from './functions/keys'
 export {mapProperty} from './functions/map-property'
 export {rangeAsString, rangeAsArray} from './functions/range-as-string'
-export {reduceTruthy, reduceFalsy} from './functions/reduce'
+export {
+  reduceTruthy,
+  reduceFalsy,
+  RedicioOptions,
+  reducio
+} from './functions/reduce'
 export {replaceProperty} from './functions/replace-property'
 export {propIs, propIsNot} from './functions/selectors'
 export {nl2br} from './functions/nl2br'

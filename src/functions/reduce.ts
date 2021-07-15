@@ -11,11 +11,7 @@ export const reduceTruthy = <T>(
   array: T[],
   check: (entry: T, i: number) => boolean
 ) => {
-  return array.reduce((result, entry, i) => {
-    if (!result) return false
-
-    return check(entry, i)
-  }, true)
+  return reducio(array, check, {initial: true})
 }
 
 /**
@@ -31,5 +27,38 @@ export const reduceFalsy = <T>(
   array: T[],
   check: (entry: T, i: number) => boolean
 ) => {
-  return reduceTruthy(array, (e, i) => !check(e, i))
+  return reducio(array, (v, i) => !check(v, i), {initial: true})
+}
+
+export type RedicioOptions = {
+  /**
+   * The initial value to check against. If any check function returns a value
+   * other than the initial all further checks will be skipped.
+   */
+  initial: boolean
+}
+
+/**
+ * Boolean reduction function. Takes a check function and an initial state.
+ *
+ * Uses a time-effecient method of only checking values that could change the
+ * result from the initial value.
+ *
+ * @param array The array to reduce
+ * @param check The function to run on each element. Must return a boolean.
+ * @param options See `ReducioOptions`
+ * @returns A boolean
+ */
+export const reducio = <T>(
+  array: T[],
+  check: (entry: T, i: number) => boolean,
+  {initial}: RedicioOptions = {initial: false}
+): boolean => {
+  return array.reduce((runningValue, value, i) => {
+    if (runningValue !== initial) {
+      return runningValue
+    }
+
+    return check(value, i)
+  }, initial)
 }
