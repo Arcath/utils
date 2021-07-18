@@ -82,6 +82,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="modules.html#arrayelement" class="tsd-kind-icon">Array<wbr>Element</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="modules.html#deeppartial" class="tsd-kind-icon">Deep<wbr>Partial</a></li>
+								<li class="tsd-kind-type-alias"><a href="modules.html#rediciooptions" class="tsd-kind-icon">Redicio<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -148,6 +149,7 @@
 								<li class="tsd-kind-function"><a href="modules.html#rangeasstring" class="tsd-kind-icon">range<wbr>AsString</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#reducefalsy" class="tsd-kind-icon">reduce<wbr>Falsy</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#reducetruthy" class="tsd-kind-icon">reduce<wbr>Truthy</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#reducio" class="tsd-kind-icon">reducio</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#remtonumber" class="tsd-kind-icon">rem<wbr>ToNumber</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#replaceproperty" class="tsd-kind-icon">replace<wbr>Property</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#resetcache" class="tsd-kind-icon">reset<wbr>Cache</a></li>
@@ -173,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">Array<wbr>Element&lt;ArrayType&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ArrayType</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/types.ts#L6">types.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/types.ts#L6">types.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -195,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">Deep<wbr>Partial&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><a href="modules.html#deeppartial" class="tsd-signature-type" data-tsd-kind="Type alias">DeepPartial</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/types.ts#L13">types.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/types.ts#L13">types.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -210,6 +212,30 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="rediciooptions" class="tsd-anchor"></a>
+					<h3>Redicio<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Redicio<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>initial<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/reduce.ts#L1">functions/reduce.ts:1</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>initial<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The initial value to check against. If any check function returns a value
+										other than the initial all further checks will be skipped.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
@@ -219,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">60</span><span class="tsd-signature-symbol"> = 60</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L26">functions/time.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L26">functions/time.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -229,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L28">functions/time.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L28">functions/time.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -239,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">HOUR_<wbr>IN_<wbr>SECONDS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L27">functions/time.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L27">functions/time.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -249,7 +275,7 @@
 					<div class="tsd-signature tsd-kind-icon">MINUTE_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L24">functions/time.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L24">functions/time.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -259,7 +285,7 @@
 					<div class="tsd-signature tsd-kind-icon">MINUTE_<wbr>IN_<wbr>SECONDS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">60</span><span class="tsd-signature-symbol"> = 60</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L23">functions/time.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L23">functions/time.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -269,7 +295,7 @@
 					<div class="tsd-signature tsd-kind-icon">SECOND_<wbr>IN_<wbr>MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">1000</span><span class="tsd-signature-symbol"> = 1000</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L21">functions/time.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L21">functions/time.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -286,7 +312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/async-for-each.ts#L21">functions/async-for-each.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/async-for-each.ts#L21">functions/async-for-each.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -356,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/async-map.ts#L7">functions/async-map.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/async-map.ts#L7">functions/async-map.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -426,7 +452,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/times.ts#L24">functions/times.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/times.ts#L24">functions/times.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -487,7 +513,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L94">functions/cache-for.ts:94</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L94">functions/cache-for.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -539,7 +565,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L68">functions/cache-for.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L68">functions/cache-for.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -591,7 +617,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L31">functions/cache-for.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L31">functions/cache-for.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -643,7 +669,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L21">functions/cache-for.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L21">functions/cache-for.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -674,7 +700,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/create-map.ts#L27">functions/create-map.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/create-map.ts#L27">functions/create-map.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -735,7 +761,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/deep-includes.ts#L10">functions/deep-includes.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/deep-includes.ts#L11">functions/deep-includes.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -779,7 +805,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/defaults.ts#L9">functions/defaults.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/defaults.ts#L9">functions/defaults.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -822,7 +848,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/diff-array.ts#L7">functions/diff-array.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/diff-array.ts#L7">functions/diff-array.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -873,7 +899,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/diff-object.ts#L7">functions/diff-object.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/diff-object.ts#L7">functions/diff-object.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -908,7 +934,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L30">functions/css.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L30">functions/css.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -936,7 +962,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L44">functions/cache-for.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L44">functions/cache-for.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -967,7 +993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L86">functions/package.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L86">functions/package.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -998,7 +1024,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/grouped-by.ts#L11">functions/grouped-by.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/grouped-by.ts#L11">functions/grouped-by.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1044,7 +1070,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L58">functions/package.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L58">functions/package.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1070,7 +1096,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L54">functions/package.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L54">functions/package.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1096,7 +1122,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L55">functions/package.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L55">functions/package.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1122,7 +1148,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L56">functions/package.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L56">functions/package.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1148,7 +1174,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/package.ts#L69">functions/package.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/package.ts#L69">functions/package.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1174,7 +1200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L64">functions/time.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L64">functions/time.ts:64</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1197,7 +1223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L55">functions/time.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L55">functions/time.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1220,7 +1246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L60">functions/time.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L60">functions/time.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1243,7 +1269,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/if-fn.ts#L16">functions/if-fn.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/if-fn.ts#L16">functions/if-fn.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1339,7 +1365,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/indexed-by.ts#L22">functions/indexed-by.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/indexed-by.ts#L22">functions/indexed-by.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1391,7 +1417,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/keys.ts#L6">functions/keys.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/keys.ts#L6">functions/keys.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1428,7 +1454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/map-property.ts#L7">functions/map-property.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/map-property.ts#L7">functions/map-property.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1474,7 +1500,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L53">functions/time.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L53">functions/time.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1497,7 +1523,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L48">functions/time.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L48">functions/time.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1520,7 +1546,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L52">functions/time.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L52">functions/time.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1543,7 +1569,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L35">functions/time.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L35">functions/time.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1566,7 +1592,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L31">functions/time.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L31">functions/time.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1589,7 +1615,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L30">functions/time.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L30">functions/time.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1612,7 +1638,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/nl2br.ts#L6">functions/nl2br.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/nl2br.ts#L6">functions/nl2br.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1643,7 +1669,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L41">functions/css.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L41">functions/css.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1671,7 +1697,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L39">functions/css.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L39">functions/css.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1699,7 +1725,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L43">functions/css.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L43">functions/css.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1727,7 +1753,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L45">functions/css.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L45">functions/css.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1755,7 +1781,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L47">functions/css.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L47">functions/css.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1783,7 +1809,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/pick.ts#L35">functions/pick.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/pick.ts#L35">functions/pick.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1833,7 +1859,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/parameterize.ts#L8">functions/parameterize.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/parameterize.ts#L8">functions/parameterize.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1865,7 +1891,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/pick.ts#L11">functions/pick.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/pick.ts#L11">functions/pick.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1915,7 +1941,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/selectors.ts#L8">functions/selectors.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/selectors.ts#L8">functions/selectors.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1967,7 +1993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/selectors.ts#L25">functions/selectors.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/selectors.ts#L25">functions/selectors.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2019,7 +2045,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L28">functions/css.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L28">functions/css.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2047,7 +2073,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/range-as-string.ts#L8">functions/range-as-string.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/range-as-string.ts#L8">functions/range-as-string.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2079,7 +2105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/range-as-string.ts#L42">functions/range-as-string.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/range-as-string.ts#L42">functions/range-as-string.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2108,7 +2134,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/reduce.ts#L30">functions/reduce.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/reduce.ts#L59">functions/reduce.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2174,7 +2200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/reduce.ts#L10">functions/reduce.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/reduce.ts#L43">functions/reduce.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2230,6 +2256,76 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="reducio" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> reducio</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">reducio&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, check<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span>, __namedParameters<span class="tsd-signature-symbol">?: </span><a href="modules.html#rediciooptions" class="tsd-signature-type" data-tsd-kind="Type alias">RedicioOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/reduce.ts#L20">functions/reduce.ts:20</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Boolean reduction function. Takes a check function and an initial state.</p>
+								</div>
+								<p>Uses a time-effecient method of only checking values that could change the
+								result from the initial value.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array to reduce</p>
+									</div>
+								</li>
+								<li>
+									<h5>check: <span class="tsd-signature-symbol">(</span>entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function to run on each element. Must return a boolean.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>entry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>entry: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>i: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>__namedParameters: <a href="modules.html#rediciooptions" class="tsd-signature-type" data-tsd-kind="Type alias">RedicioOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>A boolean</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="remtonumber" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> rem<wbr>ToNumber</h3>
@@ -2240,7 +2336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L32">functions/css.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L32">functions/css.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2268,7 +2364,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/replace-property.ts#L9">functions/replace-property.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/replace-property.ts#L9">functions/replace-property.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2342,7 +2438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/cache-for.ts#L52">functions/cache-for.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/cache-for.ts#L52">functions/cache-for.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2364,7 +2460,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L43">functions/time.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L43">functions/time.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2387,7 +2483,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L42">functions/time.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L42">functions/time.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2410,7 +2506,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/time.ts#L41">functions/time.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/time.ts#L41">functions/time.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2433,7 +2529,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/times.ts#L9">functions/times.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/times.ts#L9">functions/times.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2494,7 +2590,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/unique.ts#L6">functions/unique.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/unique.ts#L6">functions/unique.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2531,7 +2627,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/value-or.ts#L7">functions/value-or.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/value-or.ts#L7">functions/value-or.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2574,7 +2670,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L34">functions/css.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L34">functions/css.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2602,7 +2698,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/css.ts#L36">functions/css.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/css.ts#L36">functions/css.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2630,7 +2726,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Arcath/utils/blob/29d50cf/src/functions/wait-for.ts#L8">functions/wait-for.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/Arcath/utils/blob/9fe020b/src/functions/wait-for.ts#L8">functions/wait-for.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2692,6 +2788,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="modules.html#deeppartial" class="tsd-kind-icon">Deep<wbr>Partial</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#rediciooptions" class="tsd-kind-icon">Redicio<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="modules.html#hour_in_minutes" class="tsd-kind-icon">HOUR_<wbr>IN_<wbr>MINUTES</a>
@@ -2860,6 +2959,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#reducetruthy" class="tsd-kind-icon">reduce<wbr>Truthy</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#reducio" class="tsd-kind-icon">reducio</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#remtonumber" class="tsd-kind-icon">rem<wbr>ToNumber</a>
