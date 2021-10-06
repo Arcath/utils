@@ -1,6 +1,7 @@
 export {BitMask} from './classes/bit-mask'
 export {Logger} from './classes/logger'
 
+export {arrayMove} from './functions/array-move'
 export {asyncForEach} from './functions/async-for-each'
 export {asyncMap} from './functions/async-map'
 export {
