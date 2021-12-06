@@ -3,13 +3,13 @@ export interface Map<T> {
   get(x: number, y: number): T
   /** Set the value of X,Y to `value` */
   set(x: number, y: number, value: T): void
-  /** Set all the cells in the range to `value` */
+  /** Set all the cells in the range to `value` or pass a function that takes the current value as its only argument and returns a new value. */
   setRange(
     minX: number,
     maxX: number,
     minY: number,
     maxY: number,
-    value: T
+    value: T | ((current: T) => T)
   ): void
   /** The underlying map. Be warned this map maybe shifted so that 0 = minX etc... */
   map: T[][]
@@ -20,7 +20,7 @@ export interface Map<T> {
  *
  * @param maxX The maximum X value.
  * @param maxY The maximum Y value.
- * @param initialValue THe default value for all cells.
+ * @param initialValue The default value for all cells.
  * @param minX (Optional) The minimum X value, defaults to 0
  * @param minY (Optional) The minimum Y value, defaults to 0
  */
@@ -61,11 +61,15 @@ export const createMap = <T>(
     highX: number,
     lowY: number,
     highY: number,
-    value: T
+    value: T | ((current: T) => T)
   ) => {
     for (let y = lowY; y <= highY; y++) {
       for (let x = lowX; x <= highX; x++) {
-        set(x, y, value)
+        if (typeof value === 'function') {
+          set(x, y, (value as (current: T) => T)(get(x, y)))
+        } else {
+          set(x, y, value)
+        }
       }
     }
   }

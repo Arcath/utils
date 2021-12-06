@@ -19,5 +19,19 @@ describe('Create Map', () => {
     t2.setRange(2, 4, 2, 4, true)
 
     expect(t2.get(3, 4)).toBe(true)
+
+    const t3 = createMap(9, 9, 0)
+
+    t3.setRange(0, 2, 1, 1, v => {
+      return v + 1
+    })
+
+    t3.setRange(1, 1, 0, 2, v => {
+      return v + 1
+    })
+
+    expect(t3.get(0, 0)).toBe(0)
+    expect(t3.get(1, 1)).toBe(2)
+    expect(t3.get(0, 1)).toBe(1)
   })
 })
