@@ -13,6 +13,23 @@ export interface Map<T> {
   ): void
   /** The underlying map. Be warned this map maybe shifted so that 0 = minX etc... */
   map: T[][]
+  /**
+   * Run the given itterator for every cell in the map
+   * @param itterator A function that is passed the x/y coords and the current value.
+   */
+  forEach(itterator: (x: number, y: number, value: T) => void): void
+  /**
+   * Find the valid neighbours for the given position.
+   *
+   * @param x The X coord
+   * @param y The Y coord
+   * @param diagonals Include diagonals in the list?
+   */
+  neighbours(
+    x: number,
+    y: number,
+    diagonals?: boolean
+  ): {x: number; y: number}[]
 }
 
 /**
@@ -74,10 +91,53 @@ export const createMap = <T>(
     }
   }
 
+  const forEach = (itterator: (x: number, y: number, value: T) => void) => {
+    for (let y = 0; y <= map.length - 1; y++) {
+      for (let x = 0; x <= map[0].length - 1; x++) {
+        itterator(x + minX, y + minY, get(x + minX, y + minY))
+      }
+    }
+  }
+
+  const neighbours = (x: number, y: number, diagonals: boolean = false) => {
+    const actualX = translateX(x)
+    const actualY = translateY(y)
+
+    const diagonalNeighbours = [
+      [actualX - 1, actualY - 1],
+      [actualX + 1, actualY - 1],
+      [actualX - 1, actualY + 1],
+      [actualX + 1, actualY + 1]
+    ]
+
+    const directNeighbours = [
+      [actualX, actualY - 1],
+      [actualX - 1, actualY],
+      [actualX + 1, actualY],
+      [actualX, actualY + 1]
+    ]
+
+    let possibles = [...directNeighbours]
+
+    if (diagonals) {
+      possibles = [...directNeighbours, ...diagonalNeighbours]
+    }
+
+    return possibles
+      .filter(([x, y]) => {
+        return x >= 0 && y >= 0 && x <= maxX - minX && y <= maxY - minY
+      })
+      .map(([x, y]) => {
+        return {x: x + minX, y: y + minY}
+      })
+  }
+
   return {
     get,
     set,
     setRange,
-    map
+    map,
+    forEach,
+    neighbours
   }
 }

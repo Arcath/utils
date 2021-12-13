@@ -34,4 +34,17 @@ describe('Create Map', () => {
     expect(t3.get(1, 1)).toBe(2)
     expect(t3.get(0, 1)).toBe(1)
   })
+
+  it('should support forEach and neighbours', () => {
+    const map = createMap(5, 5, 0, 2, 2)
+
+    map.forEach((x, y, v) => {
+      map.set(x, y, x + y)
+    })
+
+    expect(map.get(2, 2)).toBe(4)
+
+    expect(map.neighbours(5, 5).length).toBe(2)
+    expect(map.neighbours(2, 2, true).length).toBe(3)
+  })
 })
