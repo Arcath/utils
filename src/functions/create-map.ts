@@ -124,11 +124,11 @@ export const createMap = <T>(
     }
 
     return possibles
-      .filter(([x, y]) => {
-        return x >= 0 && y >= 0 && x <= maxX - minX && y <= maxY - minY
+      .filter(([tx, ty]) => {
+        return tx >= 0 && ty >= 0 && tx <= maxX - minX && ty <= maxY - minY
       })
-      .map(([x, y]) => {
-        return {x: x + minX, y: y + minY}
+      .map(([tx, ty]) => {
+        return {x: tx + minX, y: ty + minY}
       })
   }
 

@@ -38,13 +38,13 @@ describe('Create Map', () => {
   it('should support forEach and neighbours', () => {
     const map = createMap(5, 5, 0, 2, 2)
 
-    map.forEach((x, y, v) => {
+    map.forEach((x, y) => {
       map.set(x, y, x + y)
     })
 
     expect(map.get(2, 2)).toBe(4)
 
-    expect(map.neighbours(5, 5).length).toBe(2)
-    expect(map.neighbours(2, 2, true).length).toBe(3)
+    expect(map.neighbours(5, 5)).toHaveLength(2)
+    expect(map.neighbours(2, 2, true)).toHaveLength(3)
   })
 })
