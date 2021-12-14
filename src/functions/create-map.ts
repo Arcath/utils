@@ -30,6 +30,14 @@ export interface Map<T> {
     y: number,
     diagonals?: boolean
   ): {x: number; y: number}[]
+  /** The maximum X value of the map */
+  maxX: number
+  /** The maximum Y value of the map */
+  maxY: number
+  /** The minimum X value of the map */
+  minX: number
+  /** The minimum Y value of the map */
+  minY: number
 }
 
 /**
@@ -138,6 +146,10 @@ export const createMap = <T>(
     setRange,
     map,
     forEach,
-    neighbours
+    neighbours,
+    maxX,
+    maxY,
+    minX,
+    minY
   }
 }
