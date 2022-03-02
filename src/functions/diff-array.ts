@@ -10,6 +10,7 @@ export const diffArray = <T>(
 ): {
   additional: T[]
   missing: T[]
+  common: T[]
 } => {
   const missing = original.filter(value => {
     return !compare.includes(value)
@@ -19,8 +20,13 @@ export const diffArray = <T>(
     return !original.includes(value)
   })
 
+  const common = compare.filter(value => {
+    return !additional.includes(value)
+  })
+
   return {
     additional,
-    missing
+    missing,
+    common
   }
 }
