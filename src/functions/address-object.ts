@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-explicit-any:off */
+
 import type {DeepPartial} from '../types'
 import {defaults} from './defaults'
 
