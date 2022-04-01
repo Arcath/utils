@@ -2,6 +2,7 @@
   "name": "@arcath/utils",
   "version": "0.0.0-semantically-released",
   "main": "lib/index.js",
+  "sideEffects": false,
   "scripts": {
     "test": "kcd-scripts test --runInBand --detectOpenHandles",
     "lint": "kcd-scripts lint",
