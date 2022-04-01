@@ -46,13 +46,15 @@ export class Logger {
   }
 
   log(message: string, timed = false) {
-    if (this.options.output)
+    if (this.options.output) {
       console.log(this.message(message, chalk.green, timed))
+    }
   }
 
   error(message: string, timed = false) {
-    if (this.options.output)
+    if (this.options.output) {
       console.log(this.message(message, chalk.red, timed))
+    }
   }
 
   private timeString() {

@@ -19,7 +19,7 @@
     "@types/left-pad": "^1.2.0",
     "@types/node": "^16.11.11",
     "jest": "^27.5.1",
-    "kcd-scripts": "^11.2.2",
+    "kcd-scripts": "^12.1.0",
     "prettier": "^2.6.1",
     "ts-jest": "^27.1.4",
     "typedoc": "^0.22.13",

@@ -28,8 +28,9 @@ export const indexedBy = <T extends {}, K extends keyof T>(
 
   return array.reduce<IndexedArray<T>>((indexedArray, value) => {
     //eslint-disable-next-line
-    if (!o.collide && indexedArray[value[key] as any])
+    if (!o.collide && indexedArray[value[key] as any]) {
       throw new Error(`Key ${value[key]} occurs more than once`)
+    }
 
     //eslint-disable-next-line
     indexedArray[value[key] as any] = value
