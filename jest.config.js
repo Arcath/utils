@@ -1,6 +1,6 @@
-const configs = require('kcd-scripts/config')
+import configs from 'kcd-scripts/config.js'
 
-module.exports = Object.assign(configs.jest, {
+const config = Object.assign(configs.jest, {
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
@@ -13,3 +13,5 @@ module.exports = Object.assign(configs.jest, {
     }
   }
 })
+
+export default config
