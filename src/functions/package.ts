@@ -1,4 +1,5 @@
-import readPkg from 'read-pkg-up'
+import {readPackageUpSync} from 'read-pkg-up'
+import type {NormalizedPackageJson} from 'read-pkg-up'
 
 import {defaults} from './defaults'
 import {ifFn} from './if-fn'
@@ -20,7 +21,7 @@ export type IfDependency = <Truthy, Falsy>(
 ) => Falsy | Truthy
 
 export interface Package {
-  pkg: readPkg.NormalizedPackageJson
+  pkg: NormalizedPackageJson
   pkgPath: string
   hasDependency: HasDependency
   hasDevDependency: HasDependency
@@ -41,7 +42,7 @@ export interface Package {
 const dependencyFunction = (
   key: 'dependencies' | 'devDependencies' | 'peerDependencies'
 ) => {
-  return (pkg: readPkg.NormalizedPackageJson, dep: string) => {
+  return (pkg: NormalizedPackageJson, dep: string) => {
     if (!pkg[key]) {
       return false
     }
@@ -55,10 +56,7 @@ export const hasDependency = dependencyFunction('dependencies')
 export const hasDevDependency = dependencyFunction('devDependencies')
 export const hasPeerDependency = dependencyFunction('peerDependencies')
 
-export const hasAnyDependency = (
-  pkg: readPkg.NormalizedPackageJson,
-  dep: string
-) => {
+export const hasAnyDependency = (pkg: NormalizedPackageJson, dep: string) => {
   return [
     hasDependency(pkg, dep),
     hasDevDependency(pkg, dep),
@@ -66,10 +64,7 @@ export const hasAnyDependency = (
   ].some(r => r)
 }
 
-export const hasScript = (
-  pkg: readPkg.NormalizedPackageJson,
-  script: string
-) => {
+export const hasScript = (pkg: NormalizedPackageJson, script: string) => {
   if (!pkg.scripts) {
     return false
   }
@@ -88,7 +83,7 @@ export const getPackage = (options?: Partial<PackageOptions>): Package => {
     cwd: process.cwd()
   })
 
-  const result = readPkg.sync({cwd})
+  const result = readPackageUpSync({cwd})
 
   if (typeof result === 'undefined') {
     throw new Error('Could not find package.json')
