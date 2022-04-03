@@ -1,4 +1,5 @@
-import {ifFn, hasDevDependency} from '../index'
+import {ifFn} from '../index'
+import {hasDevDependency} from './package'
 
 describe('If FN', () => {
   it('should return the correct result', () => {
