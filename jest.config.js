@@ -5,5 +5,11 @@ module.exports = Object.assign(configs.jest, {
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
   },
-  collectCoverage: true
+  collectCoverage: true,
+  extensionsToTreatAsEsm: ['.ts'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  }
 })

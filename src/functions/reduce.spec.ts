@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+import {jest} from '@jest/globals'
+
 import {reduceTruthy, reduceFalsy, reducio} from '../index'
 
 describe('Reduce Functions', () => {
@@ -8,7 +11,8 @@ describe('Reduce Functions', () => {
   })
 
   it('should only call the check function until it hits a false', () => {
-    const check = jest.fn(e => e)
+    // eslint-disable-next-line
+    const check = jest.fn<boolean, any>(e => e)
 
     reduceTruthy([true, true, false, true, true, true, false, true], check)
 
@@ -27,7 +31,8 @@ describe('Reduce Functions', () => {
       reducio([true, true, false, false, true], e => e, {initial: true})
     ).toBeFalsy()
 
-    const check = jest.fn(e => e)
+    // eslint-disable-next-line
+    const check = jest.fn<boolean, any>(e => e)
 
     expect(reducio([true, true, false, false, true], check)).toBeTruthy()
 
