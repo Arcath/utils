@@ -1,4 +1,7 @@
 /* eslint no-control-regex:off */
+// eslint-disable-next-line
+import {jest} from '@jest/globals'
+
 import {Logger} from '../'
 
 describe('Logger', () => {

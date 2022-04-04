@@ -1,5 +1,3 @@
-import chalk from 'chalk'
-
 import {defaults} from '../functions/defaults'
 
 interface LoggerOptions {
@@ -24,20 +22,18 @@ export class Logger {
     this.time = process.hrtime()
   }
 
-  private message(message: string, color: chalk.Chalk, timed: boolean) {
-    let m = color(`[${this.timeString()}]`)
+  private message(message: string, timed: boolean) {
+    let m = `[${this.timeString()}]`
 
     if (this.serviceName !== '') {
-      m += color(`[${this.serviceName}]`)
+      m += `[${this.serviceName}]`
     }
 
     m += ` ${message}`
 
     if (timed) {
       const diff = process.hrtime(this.time)
-      m += chalk.yellow(
-        ` +${((diff[0] * 1e9 + diff[1]) / 1e9).toLocaleString('en-GB')}s`
-      )
+      m += ` +${((diff[0] * 1e9 + diff[1]) / 1e9).toLocaleString('en-GB')}s`
 
       this.time = process.hrtime()
     }
@@ -46,13 +42,15 @@ export class Logger {
   }
 
   log(message: string, timed = false) {
-    if (this.options.output)
-      console.log(this.message(message, chalk.green, timed))
+    if (this.options.output) {
+      console.log(this.message(message, timed))
+    }
   }
 
   error(message: string, timed = false) {
-    if (this.options.output)
-      console.log(this.message(message, chalk.red, timed))
+    if (this.options.output) {
+      console.log(this.message(message, timed))
+    }
   }
 
   private timeString() {

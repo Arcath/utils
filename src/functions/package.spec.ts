@@ -8,7 +8,7 @@ import {
   hasPeerDependency,
   hasAnyDependency,
   hasScript
-} from '../index'
+} from './package'
 
 describe('Package Fns', () => {
   it('should get the package', () => {

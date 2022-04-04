@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+import {jest} from '@jest/globals'
+
 import {
   cacheForSync,
   cacheFor,

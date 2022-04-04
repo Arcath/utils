@@ -8,10 +8,7 @@ describe('waitFor', () => {
 
     const [result, error] = await waitFor(truthy())
 
-    if (error) {
-      throw error
-    }
-
+    expect(error).toBeNull()
     expect(result).toBe(true)
   })
 
