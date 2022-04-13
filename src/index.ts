@@ -26,6 +26,7 @@ export {
   numberToVh,
   numberToVw
 } from './functions/css'
+export {lastModifiedHeaderDate} from './functions/dates'
 export {deepIncludesArray} from './functions/deep-includes'
 export {defaults} from './functions/defaults'
 export {diffArray} from './functions/diff-array'
