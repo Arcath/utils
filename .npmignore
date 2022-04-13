@@ -3,3 +3,9 @@ coverage/
 .vscode/
 jest.config.js
 docs/
+.github/
+.eslintignore
+.prettierignore
+.prettierrc.js
+tsconfig.eslint.json
+tsconfig.json
