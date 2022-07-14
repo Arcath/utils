@@ -34,7 +34,12 @@ export {diffArray} from './functions/diff-array'
 export {diffObject} from './functions/diff-object'
 export {groupedBy, GroupedArray} from './functions/grouped-by'
 export {ifFn} from './functions/if-fn'
-export {increment} from './functions/increment'
+export {
+  increment,
+  IncrementFunction,
+  IncrementOptions,
+  decrement
+} from './functions/increment'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {keys} from './functions/keys'
 export {mapProperty} from './functions/map-property'

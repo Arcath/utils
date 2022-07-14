@@ -1,4 +1,4 @@
-import {increment} from '../index'
+import {increment, decrement} from '../index'
 
 describe('Increment', () => {
   it('should increment', () => {
@@ -13,5 +13,11 @@ describe('Increment', () => {
     expect(counterTwo()).toBe(10)
     expect(counterTwo()).toBe(15)
     expect(counterTwo()).toBe(20)
+
+    const counterThree = decrement({initial: 10})
+
+    expect(counterThree()).toBe(10)
+    expect(counterThree()).toBe(9)
+    expect(counterThree()).toBe(8)
   })
 })

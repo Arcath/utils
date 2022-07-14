@@ -1,3 +1,5 @@
+import {defaults} from './defaults'
+
 export interface IncrementOptions {
   /** Initial Value for the counter, defaults to `0` */
   initial: number
@@ -19,15 +21,40 @@ export type IncrementFunction = () => number
  * @returns `IncrementFunction`
  */
 export const increment = (
-  {initial, increment: incrementBy}: IncrementOptions = {
-    increment: 1,
-    initial: 0
-  }
+  options?: Partial<IncrementOptions>
 ): IncrementFunction => {
+  const {initial, increment: incrementBy} = defaults<IncrementOptions>(
+    options,
+    {
+      increment: 1,
+      initial: 0
+    }
+  )
+
   let counter = initial - incrementBy
 
   return () => {
     counter += incrementBy
+
+    return counter
+  }
+}
+
+export const decrement = (
+  options: Partial<IncrementOptions>
+): IncrementFunction => {
+  const {initial, increment: incrementBy} = defaults<IncrementOptions>(
+    options,
+    {
+      increment: 1,
+      initial: 0
+    }
+  )
+
+  let counter = initial + incrementBy
+
+  return () => {
+    counter -= incrementBy
 
     return counter
   }
