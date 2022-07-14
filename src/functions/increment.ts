@@ -19,12 +19,15 @@ export type IncrementFunction = () => number
  * @returns `IncrementFunction`
  */
 export const increment = (
-  {initial, increment}: IncrementOptions = {increment: 1, initial: 0}
+  {initial, increment: incrementBy}: IncrementOptions = {
+    increment: 1,
+    initial: 0
+  }
 ): IncrementFunction => {
-  let counter = initial - increment
+  let counter = initial - incrementBy
 
   return () => {
-    counter += increment
+    counter += incrementBy
 
     return counter
   }
