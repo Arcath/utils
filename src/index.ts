@@ -42,6 +42,7 @@ export {
 } from './functions/increment'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {keys} from './functions/keys'
+export {parseCDIR} from './functions/network'
 export {mapProperty} from './functions/map-property'
 export {rangeAsString, rangeAsArray} from './functions/range-as-string'
 export {
