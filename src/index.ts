@@ -41,6 +41,8 @@ export {
   decrement
 } from './functions/increment'
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
+export {invariant, InvariantOptions} from './functions/invariant'
+export {isEnv, isProduction, isDev, isTest} from './functions/is-env'
 export {keys} from './functions/keys'
 export {parseCDIR} from './functions/network'
 export {mapProperty} from './functions/map-property'
