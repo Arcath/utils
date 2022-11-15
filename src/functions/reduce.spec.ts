@@ -12,7 +12,7 @@ describe('Reduce Functions', () => {
 
   it('should only call the check function until it hits a false', () => {
     // eslint-disable-next-line
-    const check = jest.fn<boolean, any>(e => e)
+    const check = jest.fn<(e: boolean) => boolean>(e => e)
 
     reduceTruthy([true, true, false, true, true, true, false, true], check)
 
@@ -32,7 +32,7 @@ describe('Reduce Functions', () => {
     ).toBeFalsy()
 
     // eslint-disable-next-line
-    const check = jest.fn<boolean, any>(e => e)
+    const check = jest.fn<(e: boolean) => boolean>(e => e)
 
     expect(reducio([true, true, false, false, true], check)).toBeTruthy()
 
