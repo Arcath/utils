@@ -1,6 +1,6 @@
 import {defaults} from '../functions/defaults'
 
-interface LoggerOptions {
+export interface LoggerOptions {
   // If `false` no messages will be logged.
   output: boolean
 }

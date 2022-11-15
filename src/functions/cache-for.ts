@@ -5,7 +5,8 @@ const cache: {[key: string]: any} = {}
 
 const timeouts: NodeJS.Timeout[] = []
 
-interface CacheForOptions {
+/** Options passed to caching functions */
+export interface CacheForOptions {
   /** A key to store this value under */
   key: string
 

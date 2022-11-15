@@ -1,7 +1,12 @@
-interface DiffObjectResult<T, K> {
+export interface DiffObjectResult<T, K> {
+  /** Keys that have been added to the Object. */
   added: (keyof K & keyof T)[]
+  /** Keys that are consistent but have changed. */
   changed: (keyof K & keyof T)[]
+  /** Keys that have been removed. */
   removed: (keyof K & keyof T)[]
+  /** Keys that remained the same */
+  same: (keyof K & keyof T)[]
 }
 
 export const diffObject = <T extends {}, K extends {}>(
@@ -11,7 +16,8 @@ export const diffObject = <T extends {}, K extends {}>(
   const result: DiffObjectResult<T, K> = {
     added: [],
     changed: [],
-    removed: []
+    removed: [],
+    same: []
   }
 
   Object.keys(original).forEach(key => {
@@ -23,6 +29,9 @@ export const diffObject = <T extends {}, K extends {}>(
       ) {
         //eslint-disable-next-line
         result.changed.push(key as any)
+      } else {
+        //eslint-disable-next-line
+        result.same.push(key as any)
       }
     } else {
       //eslint-disable-next-line

@@ -3,6 +3,7 @@
 import type {DeepPartial} from '../types'
 import {defaults} from './defaults'
 
+/** Options passed to `addressObject` */
 export type AddressObjectOptions = {
   /** The seperator between address parts. Defaults to `.` */
   seperator: string

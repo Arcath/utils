@@ -19,5 +19,6 @@ describe('Diff Object', () => {
     expect(result.changed).toHaveLength(1)
     expect(result.added).toHaveLength(1)
     expect(result.removed).toHaveLength(1)
+    expect(result.same).toHaveLength(1)
   })
 })

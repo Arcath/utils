@@ -1,4 +1,5 @@
-type WaitForResult<T> = [null, Error] | [T, null]
+/** Result from waitFor, either `null` and an `Error` or the expected result and `null` */
+export type WaitForResult<T> = [null, Error] | [T, null]
 
 /**
  * Normalises a promise that errors into an awaitable [result, error] array.

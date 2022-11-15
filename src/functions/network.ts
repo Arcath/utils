@@ -13,7 +13,7 @@ const binaryToIp = (binaryIp: string) => {
     .join('.')
 }
 
-interface CIDRObject {
+export interface CIDRObject {
   /** The IP as a binary string */
   binary: string
   /** The broadcast address of the network as a binary string */
