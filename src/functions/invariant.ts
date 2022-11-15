@@ -3,7 +3,7 @@ import {defaults} from './defaults'
 
 const defaultPrefix: string = 'Invariant Error'
 
-export interface InvariantOptions<Condition extends any> {
+export interface InvariantOptions<Condition> {
   /** The prefix for errors, defaults to `Invariant Error` */
   prefix: string
   /** Should the message be stripped? defaults to `true` in production. */
@@ -19,7 +19,7 @@ export interface InvariantOptions<Condition extends any> {
  * @param options A partial instance of `InvairantOptions`
  * @returns Asserts the condition is not falsey
  */
-export function invariant<Condition extends any>(
+export function invariant<Condition>(
   condition: Condition,
   options?: Partial<InvariantOptions<Condition>>
 ): asserts condition {

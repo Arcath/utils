@@ -26,11 +26,11 @@ describe('invariant', () => {
       invariant(value, {message: 'Value is false'})
 
       expectTypeOf(value).toBeNever()
-    })
+    }).toThrowError('Invariant Error: Value is false')
 
     expect(() => {
       const count = 0
-      invariant(count, {message: count => `count is ${count}`})
+      invariant(count, {message: c => `count is ${c}`})
 
       expectTypeOf(count).toBeNever()
     }).toThrow(`Invariant Error: count is 0`)
