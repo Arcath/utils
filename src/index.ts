@@ -15,6 +15,7 @@ export {
   resetCache,
   CacheForOptions
 } from './functions/cache-for'
+export {clamp} from './functions/clamp'
 export {createMap, Map} from './functions/create-map'
 export {
   pxToNumber,
