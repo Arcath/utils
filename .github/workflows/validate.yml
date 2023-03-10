@@ -42,6 +42,7 @@ jobs:
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
+          install-command: echo "Pre-Cached"
         env:
           HUSKY_SKIP_INSTALL: true
       - name: 🧼 Lint
