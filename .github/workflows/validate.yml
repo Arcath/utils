@@ -11,6 +11,38 @@ on:
       - '!all-contributors/**'
   pull_request: {}
 jobs:
+  prepare:
+    name: 🎫 Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+  lint:
+    name: 🧼 ESLint
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+      - name: 🧼 Lint
+        run: npm run lint
+
   test:
     # ignore all-contributors PRs
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
@@ -18,6 +50,7 @@ jobs:
       matrix:
         node: [16, 18]
     runs-on: ubuntu-latest
+    needs: prepare
     steps:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
