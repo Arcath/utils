@@ -17,16 +17,22 @@ jobs:
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
+      - name: 💾 Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v3
+        path: /node_modules
+        key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
-        env:
-          HUSKY_SKIP_INSTALL: true
+        if: steps.node-cache.outputs.cache-hit != 'true'
+        run: npm install
+
   lint:
     name: 🧼 ESLint
     runs-on: ubuntu-latest
@@ -34,17 +40,18 @@ jobs:
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
+
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
-          install-command: echo "Pre-Cached"
-        env:
-          HUSKY_SKIP_INSTALL: true
+
+      - name: 💾 Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v3
+        path: /node_modules
+        key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: 🧼 Lint
         run: npm run lint
 
