@@ -82,7 +82,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: lib
-          key: lib-${GITHUB_SHA}
+          key: lib-${{GITHUB_SHA}}
 
       - name: 🏗 TypeScript
         run: npm run build
@@ -151,7 +151,7 @@ jobs:
         run: npm run document
 
       - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs
@@ -173,7 +173,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: lib
-          key: lib-${GITHUB_SHA}
+          key: lib-${{GITHUB_SHA}}
 
       - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v3
