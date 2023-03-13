@@ -95,6 +95,7 @@ jobs:
         node: [16, 18]
     runs-on: ubuntu-latest
     needs: prepare
+    name: 🧪 Test
     steps:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -121,13 +122,15 @@ jobs:
 
       - name: ⬆️ Upload coverage report
         uses: codecov/codecov-action@v3
-  release:
-    if:
-      ${{ github.repository == 'arcath/utils' &&
-      contains('refs/heads/master,refs/heads/beta,refs/heads/next,refs/heads/alpha',
-      github.ref) && github.event_name == 'push' }}
+
+  document:
     runs-on: ubuntu-latest
     needs: [typescript, lint, test]
+    name: 📚 Document
+    on:
+      push:
+        branches:
+          - main
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
@@ -148,13 +151,29 @@ jobs:
         run: npm run document
 
       - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4
         with:
           branch: gh-pages
           folder: docs
 
-      - name: 🏗 Build
-        run: npm run build
+  release:
+    name: 🚀 Release
+    on:
+      push:
+        branches:
+          - main
+    runs-on: ubuntu-latest
+    needs: [typescript, lint, test]
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 💾 Cache Build
+        id: lib-cache
+        uses: actions/cache@v3
+        with:
+          path: lib
+          key: lib-${GITHUB_SHA}
 
       - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v3
