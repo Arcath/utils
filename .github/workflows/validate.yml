@@ -175,6 +175,9 @@ jobs:
           path: lib
           key: lib-${{github.sha}}
 
+      - name: 🔍 Inspect Lib
+        run: ls -R lib/
+
       - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v3
         with:
