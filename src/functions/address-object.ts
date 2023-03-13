@@ -7,6 +7,8 @@ import {defaults} from './defaults'
 export type AddressObjectOptions = {
   /** The seperator between address parts. Defaults to `.` */
   seperator: string
+  /** The fallback value to return */
+  fallback?: any
 }
 
 const defaultOptions: AddressObjectOptions = {
@@ -26,19 +28,25 @@ const defaultOptions: AddressObjectOptions = {
 export const addressObject = <ObjectType extends {[key: string]: any}>(
   object: ObjectType,
   address: string,
-  options?: DeepPartial<AddressObjectOptions>
+  options?: Partial<AddressObjectOptions>
 ) => {
-  const {seperator} = defaults(options, defaultOptions)
+  const {seperator, fallback} = defaults(options, defaultOptions)
 
-  return address.split(seperator).reduce((value, key) => {
-    return value[key]
+  return address.split(seperator).reduce((object, key) => {
+    if (object[key]) {
+      return object[key]
+    }
+
+    if (fallback) return fallback
+
+    throw new Error(`Can't address object with address ${address}`)
   }, object)
 }
 
 export const testObjectAddress = <ObjectType extends {[key: string]: any}>(
   object: ObjectType,
   address: string,
-  options?: DeepPartial<AddressObjectOptions>
+  options?: Partial<AddressObjectOptions>
 ): boolean => {
   const {seperator} = defaults(options, defaultOptions)
 

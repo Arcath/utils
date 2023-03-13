@@ -17,6 +17,12 @@ describe('Address Object', () => {
     expect(
       addressObject(object, 'level1#level2#level3#sample', {seperator: '#'})
     ).toBe('pass')
+    expect(() => {
+      addressObject(object, 'level1.level2.fail')
+    }).toThrow("Can't address object with address level1.level2.fail")
+    expect(
+      addressObject(object, 'level1.level2.fail', {fallback: 'fallback'})
+    ).toBe('fallback')
 
     expect(testObjectAddress(object, 'level1.level2')).toBe(true)
     expect(testObjectAddress(object, 'level1.level1')).toBe(false)
