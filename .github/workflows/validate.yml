@@ -57,6 +57,36 @@ jobs:
       - name: 🧼 Lint
         run: npm run lint
 
+  typescript:
+    name: 🏗 TypeScript
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 💾 Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: 💾 Cache Build
+        id: lib-cache
+        uses: actions/cache@v3
+        with:
+          path: lib
+          key: lib-${GITHUB_SHA}
+
+      - name: 🏗 TypeScript
+        run: npm run build
+
   test:
     # ignore all-contributors PRs
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
@@ -79,15 +109,15 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1.8.25
+      - name: 💾 Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v3
         with:
-          useLockFile: false
-        env:
-          HUSKY_SKIP_INSTALL: true
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
 
-      - name: 🧪 Run validate script
-        run: npm run validate
+      - name: 🧪 Test
+        run: npm test
 
       - name: ⬆️ Upload coverage report
         uses: codecov/codecov-action@v3
@@ -97,7 +127,7 @@ jobs:
       contains('refs/heads/master,refs/heads/beta,refs/heads/next,refs/heads/alpha',
       github.ref) && github.event_name == 'push' }}
     runs-on: ubuntu-latest
-    needs: test
+    needs: [typescript, lint, test]
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
@@ -107,12 +137,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1.8.25
+      - name: 💾 Cache Node Modules
+        id: node-cache
+        uses: actions/cache@v3
         with:
-          useLockFile: false
-        env:
-          HUSKY_SKIP_INSTALL: true
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
 
       - name: 📚 Build Docs
         run: npm run document
