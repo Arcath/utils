@@ -34,3 +34,26 @@ export const addressObject = <ObjectType extends {[key: string]: any}>(
     return value[key]
   }, object)
 }
+
+export const testObjectAddress = <ObjectType extends {[key: string]: any}>(
+  object: ObjectType,
+  address: string,
+  options?: DeepPartial<AddressObjectOptions>
+): boolean => {
+  const {seperator} = defaults(options, defaultOptions)
+
+  return address.split(seperator).reduce(
+    ({currentObject, result}, key) => {
+      if (!result) {
+        return {currentObject, result}
+      }
+
+      if (currentObject[key]) {
+        return {currentObject: currentObject[key], result: true}
+      }
+
+      return {currentObject: {}, result: false}
+    },
+    {currentObject: object, result: true}
+  ).result
+}

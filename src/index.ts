@@ -1,7 +1,11 @@
 export {BitMask} from './classes/bit-mask'
 export {Logger, LoggerOptions} from './classes/logger'
 
-export {addressObject, AddressObjectOptions} from './functions/address-object'
+export {
+  addressObject,
+  AddressObjectOptions,
+  testObjectAddress
+} from './functions/address-object'
 export {arrayMove} from './functions/array-move'
 export {randomEntry} from './functions/array-selectors'
 export {asyncForEach} from './functions/async-for-each'
