@@ -82,7 +82,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: lib
-          key: lib-${{GITHUB_SHA}}
+          key: lib-${{github.sha}}
 
       - name: 🏗 TypeScript
         run: npm run build
@@ -173,7 +173,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: lib
-          key: lib-${{GITHUB_SHA}}
+          key: lib-${{github.sha}}
 
       - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v3
