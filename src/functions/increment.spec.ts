@@ -8,16 +8,18 @@ describe('Increment', () => {
     expect(counter()).toBe(1)
     expect(counter()).toBe(2)
 
-    const counterTwo = increment({initial: 10, increment: 5})
+    const counterTwo = increment({initial: 10, increment: 5, max: 20})
 
     expect(counterTwo()).toBe(10)
     expect(counterTwo()).toBe(15)
     expect(counterTwo()).toBe(20)
+    expect(counterTwo()).toBe(20)
 
-    const counterThree = decrement({initial: 10})
+    const counterThree = decrement({initial: 10, max: 8})
 
     expect(counterThree()).toBe(10)
     expect(counterThree()).toBe(9)
+    expect(counterThree()).toBe(8)
     expect(counterThree()).toBe(8)
   })
 })

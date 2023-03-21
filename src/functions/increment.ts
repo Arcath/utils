@@ -5,6 +5,8 @@ export interface IncrementOptions {
   initial: number
   /** Value to increase counter by on each call, defaults to `1`. */
   increment: number
+  /** Maximum value to increment to. */
+  max: number
 }
 
 /**
@@ -23,37 +25,55 @@ export type IncrementFunction = () => number
 export const increment = (
   options?: Partial<IncrementOptions>
 ): IncrementFunction => {
-  const {initial, increment: incrementBy} = defaults<IncrementOptions>(
-    options,
-    {
-      increment: 1,
-      initial: 0
-    }
-  )
+  const {
+    initial,
+    increment: incrementBy,
+    max
+  } = defaults<IncrementOptions>(options, {
+    increment: 1,
+    initial: 0,
+    max: 0
+  })
 
   let counter = initial - incrementBy
 
   return () => {
+    if (max !== 0 && counter >= max) {
+      return counter
+    }
+
     counter += incrementBy
 
     return counter
   }
 }
 
+/**
+ *  Returns a function that when called returns a number that decrements by the given ammount each time.
+ *
+ * @param IncrementOptions
+ * @returns `IncrementFunction`
+ */
 export const decrement = (
   options: Partial<IncrementOptions>
 ): IncrementFunction => {
-  const {initial, increment: incrementBy} = defaults<IncrementOptions>(
-    options,
-    {
-      increment: 1,
-      initial: 0
-    }
-  )
+  const {
+    initial,
+    increment: incrementBy,
+    max
+  } = defaults<IncrementOptions>(options, {
+    increment: 1,
+    initial: 0,
+    max: 0
+  })
 
   let counter = initial + incrementBy
 
   return () => {
+    if (max !== 0 && counter <= max) {
+      return counter
+    }
+
     counter -= incrementBy
 
     return counter
