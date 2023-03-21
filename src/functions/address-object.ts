@@ -1,6 +1,5 @@
 /* eslint @typescript-eslint/no-explicit-any:off */
 
-import type {DeepPartial} from '../types'
 import {defaults} from './defaults'
 
 /** Options passed to `addressObject` */
@@ -32,9 +31,9 @@ export const addressObject = <ObjectType extends {[key: string]: any}>(
 ) => {
   const {seperator, fallback} = defaults(options, defaultOptions)
 
-  return address.split(seperator).reduce((object, key) => {
-    if (object[key]) {
-      return object[key]
+  return address.split(seperator).reduce((currentObject, key) => {
+    if (currentObject[key]) {
+      return currentObject[key]
     }
 
     if (fallback) return fallback
