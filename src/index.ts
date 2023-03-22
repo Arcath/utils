@@ -49,7 +49,7 @@ export {
 export {indexedBy, IndexedArray, IndexedByOptions} from './functions/indexed-by'
 export {invariant, InvariantOptions} from './functions/invariant'
 export {isEnv, isProduction, isDev, isTest} from './functions/is-env'
-export {keys} from './functions/keys'
+export {keys, keyValue} from './functions/keys'
 export {parseCDIR, CIDRObject} from './functions/network'
 export {mapProperty} from './functions/map-property'
 export {rangeAsString, rangeAsArray} from './functions/range-as-string'
