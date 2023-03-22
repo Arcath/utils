@@ -1,5 +1,4 @@
-import {readPackageUpSync} from 'read-pkg-up'
-import type {NormalizedPackageJson} from 'read-pkg-up'
+import {readPackageUpSync, type NormalizedPackageJson} from 'read-pkg-up'
 
 import {defaults} from './defaults'
 import {ifFn} from './if-fn'
