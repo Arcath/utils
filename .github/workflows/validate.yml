@@ -92,7 +92,7 @@ jobs:
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
     strategy:
       matrix:
-        node: [16, 18]
+        node: [16, 18, 19]
     runs-on: ubuntu-latest
     needs: prepare
     name: 🧪 Test
