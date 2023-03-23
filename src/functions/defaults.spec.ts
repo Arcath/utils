@@ -1,4 +1,4 @@
-import {defaults} from '../'
+import {defaults} from './defaults'
 
 describe('Defaults', () => {
   it('should set defaults', () => {

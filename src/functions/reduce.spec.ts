@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import {jest} from '@jest/globals'
 
-import {reduceTruthy, reduceFalsy, reducio} from '../index'
+import {reduceTruthy, reduceFalsy, reducio} from './reduce'
 
 describe('Reduce Functions', () => {
   it('should reduce truthy', () => {

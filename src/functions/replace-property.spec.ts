@@ -1,4 +1,4 @@
-import {replaceProperty} from '../index'
+import {replaceProperty} from './replace-property'
 
 describe('Replace Property', () => {
   it('should replace a property', () => {

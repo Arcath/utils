@@ -9,7 +9,7 @@ import {
   numberToRem,
   numberToVh,
   numberToVw
-} from '../'
+} from './css'
 
 describe('CSS', () => {
   it('should conver units to numbers', () => {

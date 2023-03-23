@@ -1,4 +1,4 @@
-import {deepIncludesArray} from '../index'
+import {deepIncludesArray} from './deep-includes'
 
 describe('Deep Includes', () => {
   test('it should return the correct value', () => {

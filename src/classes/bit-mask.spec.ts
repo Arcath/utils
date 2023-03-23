@@ -1,4 +1,4 @@
-import {BitMask} from '../'
+import {BitMask} from './bit-mask'
 
 const READ = 'read'
 const WRITE = 'write'

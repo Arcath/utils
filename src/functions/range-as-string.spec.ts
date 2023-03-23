@@ -1,4 +1,4 @@
-import {rangeAsString, rangeAsArray} from '../'
+import {rangeAsString, rangeAsArray} from './range-as-string'
 
 describe('Range As String', () => {
   it('should create strings', () => {

@@ -8,7 +8,7 @@ import {
   cacheKey,
   resetCache,
   cacheKeyExists
-} from '../'
+} from './cache-for'
 
 jest.setTimeout(20000)
 

@@ -1,4 +1,4 @@
-import {keys, keyValue} from '../'
+import {keys, keyValue} from './keys'
 
 describe('Keys', () => {
   it('should return an array of keys', () => {

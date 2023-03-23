@@ -1,4 +1,4 @@
-import {ifFn} from '../index'
+import {ifFn} from './if-fn'
 import {hasDevDependency} from './package'
 
 describe('If FN', () => {

@@ -1,4 +1,4 @@
-import {clamp} from '../'
+import {clamp} from './clamp'
 
 describe('clamp', () => {
   it('should clamp values', () => {

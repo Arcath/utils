@@ -1,4 +1,4 @@
-import {diffArray} from '../'
+import {diffArray} from './diff-array'
 
 describe('diffArray', () => {
   it('should diff arrays', () => {

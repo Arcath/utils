@@ -1,4 +1,4 @@
-import {randomEntry} from '../'
+import {randomEntry} from './array-selectors'
 
 describe('Array Selectors', () => {
   it('should select a random entry', () => {

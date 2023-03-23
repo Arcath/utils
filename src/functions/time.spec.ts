@@ -17,7 +17,7 @@ import {
   HOUR_IN_MINUTES,
   HOUR_IN_SECONDS,
   HOUR_IN_MS
-} from '../'
+} from './time'
 
 describe('Time FNS', () => {
   it('should calculate values', () => {

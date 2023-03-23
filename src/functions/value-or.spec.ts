@@ -1,4 +1,4 @@
-import {valueOr} from '../'
+import {valueOr} from './value-or'
 
 describe('ValueOr', () => {
   it('should work', () => {

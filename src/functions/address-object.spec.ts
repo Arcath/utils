@@ -1,4 +1,4 @@
-import {addressObject, testObjectAddress} from '../'
+import {addressObject, testObjectAddress} from './address-object'
 
 describe('Address Object', () => {
   it('should address an object', () => {

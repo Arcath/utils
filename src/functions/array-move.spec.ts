@@ -1,4 +1,4 @@
-import {arrayMove} from '../index'
+import {arrayMove} from './array-move'
 
 describe('Array Move', () => {
   it('should move objects in an array', () => {

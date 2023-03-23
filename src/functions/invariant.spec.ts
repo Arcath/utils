@@ -1,6 +1,6 @@
 import {expectTypeOf} from 'expect-type'
 
-import {invariant} from '../'
+import {invariant} from './invariant'
 
 describe('invariant', () => {
   it('should throw errors', () => {

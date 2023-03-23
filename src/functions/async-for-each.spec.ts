@@ -1,4 +1,4 @@
-import {asyncForEach} from '../'
+import {asyncForEach} from './async-for-each'
 
 describe('Async For Each (in sequence)', () => {
   it('should work async', async () => {

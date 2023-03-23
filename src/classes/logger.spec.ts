@@ -2,7 +2,7 @@
 // eslint-disable-next-line
 import {jest} from '@jest/globals'
 
-import {Logger} from '../'
+import {Logger} from './logger'
 
 describe('Logger', () => {
   it('should log messages', () => {

@@ -1,4 +1,4 @@
-import {indexedBy} from '../'
+import {indexedBy} from './indexed-by'
 
 describe('Indexed By', () => {
   it('should produce an index', () => {

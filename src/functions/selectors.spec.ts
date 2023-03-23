@@ -1,4 +1,4 @@
-import {propIs, propIsNot} from '../'
+import {propIs, propIsNot} from './selectors'
 
 describe('Selectors', () => {
   it('should select items', () => {

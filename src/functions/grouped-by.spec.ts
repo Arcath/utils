@@ -1,4 +1,4 @@
-import {groupedBy} from '../'
+import {groupedBy} from './grouped-by'
 
 describe('Grouped By', () => {
   it('should group items', () => {

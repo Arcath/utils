@@ -1,4 +1,4 @@
-import {parameterize} from '../'
+import {parameterize} from './parameterize'
 
 describe('Parameterize', () => {
   it('should make strings safe for urls', () => {

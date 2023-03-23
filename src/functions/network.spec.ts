@@ -1,4 +1,4 @@
-import {parseCDIR} from '../index'
+import {parseCDIR} from './network'
 
 describe('Network', () => {
   it('should parse', () => {

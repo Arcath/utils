@@ -1,8 +1,8 @@
-import {lastModifiedHeaderDate} from '../index'
+import {lastModifiedHeaderDate} from './dates'
 
 describe('Dates', () => {
-  it('should generate a last modified date',  () => {
-    const timeString = "Wed Apr 6 2022 09:38:39 GMT+0100 (British Summer Time)"
+  it('should generate a last modified date', () => {
+    const timeString = 'Wed Apr 6 2022 09:38:39 GMT+0100 (British Summer Time)'
 
     const lastModified = lastModifiedHeaderDate(timeString)
 

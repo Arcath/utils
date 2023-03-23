@@ -1,4 +1,4 @@
-import {createMap} from '../'
+import {createMap} from './create-map'
 
 describe('Create Map', () => {
   it('should create a map', () => {

@@ -7,6 +7,7 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules kcd-scripts test --runInBand --detectOpenHandles",
     "lint": "kcd-scripts lint",
     "build": "tsc",
+    "build:index": "node ./scripts/build.cjs",
     "document": "typedoc --out ./docs --entryPoints src/index.ts --name Utils --readme Readme.md && echo utils.arcath.net > ./docs/CNAME",
     "validate": "kcd-scripts validate",
     "format": "kcd-scripts format"

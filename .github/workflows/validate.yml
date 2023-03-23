@@ -84,6 +84,9 @@ jobs:
           path: lib
           key: lib-${{github.sha}}
 
+      - name: 🧙‍♂️ Build Index
+        run: npm run build:index
+
       - name: 🏗 TypeScript
         run: npm run build
 

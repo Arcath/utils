@@ -1,4 +1,4 @@
-import {increment, decrement} from '../index'
+import {increment, decrement} from './increment'
 
 describe('Increment', () => {
   it('should increment', () => {
