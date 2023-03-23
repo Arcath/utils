@@ -150,6 +150,9 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
 
+      - name: 🧙‍♂️ Build Index
+        run: npm run build:index
+
       - name: 📚 Build Docs
         run: npm run document
 
