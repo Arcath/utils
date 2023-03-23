@@ -49,7 +49,7 @@ export const increment = (
     counter +=
       typeof incremental === 'number'
         ? incremental
-        : incremental(initial, count++)
+        : incremental(counter, count++)
 
     return counter
   }
@@ -87,7 +87,7 @@ export const decrement = (
     counter -=
       typeof incremental === 'number'
         ? incremental
-        : incremental(initial, count++)
+        : incremental(counter, count++)
 
     return counter
   }

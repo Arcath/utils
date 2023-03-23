@@ -41,5 +41,22 @@ describe('Increment', () => {
     expect(counterFive()).toBe(0)
     expect(counterFive()).toBe(-9)
     expect(counterFive()).toBe(-17)
+
+    let counterSixValue = 0
+
+    const counterSix = increment({
+      increment: current => {
+        if (current !== -1) {
+          expect(current).toBe(counterSixValue)
+        }
+
+        return 1
+      }
+    })
+
+    counterSixValue = counterSix()
+    expect(counterSixValue).toBe(0)
+    counterSixValue = counterSix()
+    expect(counterSixValue).toBe(1)
   })
 })
