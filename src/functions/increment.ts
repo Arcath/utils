@@ -4,7 +4,7 @@ export interface IncrementOptions {
   /** Initial Value for the counter, defaults to `0` */
   initial: number
   /** Value to increase counter by on each call, defaults to `1`. */
-  increment: number
+  increment: number | ((current: number, count: number) => number)
   /** Maximum value to increment to. */
   max: number
 }
@@ -27,7 +27,7 @@ export const increment = (
 ): IncrementFunction => {
   const {
     initial,
-    increment: incrementBy,
+    increment: incremental,
     max
   } = defaults<IncrementOptions>(options, {
     increment: 1,
@@ -35,14 +35,21 @@ export const increment = (
     max: 0
   })
 
-  let counter = initial - incrementBy
+  let counter =
+    initial -
+    (typeof incremental === 'number' ? incremental : incremental(initial, 0))
+
+  let count = 0
 
   return () => {
     if (max !== 0 && counter >= max) {
       return counter
     }
 
-    counter += incrementBy
+    counter +=
+      typeof incremental === 'number'
+        ? incremental
+        : incremental(initial, count++)
 
     return counter
   }
@@ -59,7 +66,7 @@ export const decrement = (
 ): IncrementFunction => {
   const {
     initial,
-    increment: incrementBy,
+    increment: incremental,
     max
   } = defaults<IncrementOptions>(options, {
     increment: 1,
@@ -67,14 +74,20 @@ export const decrement = (
     max: 0
   })
 
-  let counter = initial + incrementBy
+  let counter =
+    initial +
+    (typeof incremental === 'number' ? incremental : incremental(initial, 0))
+  let count = 0
 
   return () => {
     if (max !== 0 && counter <= max) {
       return counter
     }
 
-    counter -= incrementBy
+    counter -=
+      typeof incremental === 'number'
+        ? incremental
+        : incremental(initial, count++)
 
     return counter
   }

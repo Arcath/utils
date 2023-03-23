@@ -21,5 +21,25 @@ describe('Increment', () => {
     expect(counterThree()).toBe(9)
     expect(counterThree()).toBe(8)
     expect(counterThree()).toBe(8)
+
+    const counterFour = increment({
+      increment: (current, count) => {
+        return 10 - count
+      }
+    })
+
+    expect(counterFour()).toBe(0)
+    expect(counterFour()).toBe(9)
+    expect(counterFour()).toBe(17)
+
+    const counterFive = decrement({
+      increment: (current, count) => {
+        return 10 - count
+      }
+    })
+
+    expect(counterFive()).toBe(0)
+    expect(counterFive()).toBe(-9)
+    expect(counterFive()).toBe(-17)
   })
 })
