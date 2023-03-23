@@ -6,3 +6,5 @@
 export const nl2br = (string: string) => {
   return string.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br />$2')
 }
+
+// {nl2br}

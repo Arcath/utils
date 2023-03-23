@@ -38,3 +38,5 @@ export const indexedBy = <T extends {}, K extends keyof T>(
     return indexedArray
   }, {})
 }
+
+// {indexedBy, IndexedArray, IndexedByOptions}

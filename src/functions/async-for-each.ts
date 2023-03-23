@@ -14,3 +14,5 @@ export const asyncForEach = async <T>(
 
   await Promise.all(promises)
 }
+
+// {asyncForEach}

@@ -45,3 +45,5 @@ export const numberToRem = asUnit('rem')
 export const numberToVh = asUnit('vh')
 /** Conver a number to vw */
 export const numberToVw = asUnit('vw')
+
+// {pxToNumber, emToNumber, remToNumber, vhToNumber, vwToNumber, numberToPx, numberToEm, numberToRem, numberToVh, numberToVw}

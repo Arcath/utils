@@ -49,3 +49,5 @@ export const omit = <
     return obj
   }, {})
 }
+
+// {pick, omit}

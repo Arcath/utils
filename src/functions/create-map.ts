@@ -153,3 +153,5 @@ export const createMap = <T>(
     minY
   }
 }
+
+// {createMap, Map}

@@ -24,3 +24,5 @@ export const groupedBy = <T extends {}, K extends keyof T>(
     return groups
   }, {})
 }
+
+// {groupedBy, GroupedArray}

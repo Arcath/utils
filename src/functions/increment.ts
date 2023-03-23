@@ -92,3 +92,5 @@ export const decrement = (
     return counter
   }
 }
+
+// {increment, IncrementFunction, IncrementOptions, decrement}

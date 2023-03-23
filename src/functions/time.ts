@@ -62,3 +62,5 @@ export const hoursInSeconds = chain(
   multiplyBy(MINUTE_IN_SECONDS)
 )
 export const hoursInMinutes = multiplyBy(HOUR_IN_MINUTES)
+
+// {msAsSeconds, msAsMinutes, msAsHour, secondsInMs, secondsAsMinutes, secondsAsHours, minutesInMs, minutesInSeconds, minutesAsHours, hoursInMs, hoursInMinutes, hoursInSeconds, SECOND_IN_MS, MINUTE_IN_SECONDS, MINUTE_IN_MS, HOUR_IN_MINUTES, HOUR_IN_SECONDS, HOUR_IN_MS}

@@ -91,3 +91,5 @@ export class BitMask<T> {
     })
   }
 }
+
+// {BitMask}

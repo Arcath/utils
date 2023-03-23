@@ -10,3 +10,5 @@ export const mapProperty = <T, K extends keyof T>(
 ): T[K][] => {
   return array.map(element => element[property])
 }
+
+// {mapProperty}

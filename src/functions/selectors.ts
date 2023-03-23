@@ -31,3 +31,5 @@ export const propIsNot = <T, K extends keyof T>(
     return item[prop] !== value
   })
 }
+
+// {propIs, propIsNot}

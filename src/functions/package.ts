@@ -113,3 +113,5 @@ export const getPackage = (options?: Partial<PackageOptions>): Package => {
     ifScript: ifFn((script: string) => hasScript(pkg, script))
   }
 }
+
+// exclude

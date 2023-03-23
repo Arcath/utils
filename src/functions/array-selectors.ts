@@ -9,3 +9,5 @@
 export const randomEntry = <Entry>(array: Entry[]): Entry => {
   return array[(array.length * Math.random()) | 0]
 }
+
+// {randomEntry}

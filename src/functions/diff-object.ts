@@ -49,3 +49,5 @@ export const diffObject = <T extends {}, K extends {}>(
 
   return result
 }
+
+// {diffObject, DiffObjectResult}

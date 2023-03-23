@@ -10,3 +10,5 @@ export const asyncMap = async <T, K>(
 ): Promise<K[]> => {
   return Promise.all(list.map(executor))
 }
+
+// {asyncMap}

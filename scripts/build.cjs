@@ -14,7 +14,21 @@ fs.readdir(FUNCTIONS, (err, files) => {
       return
     }
 
-    lines.push(`export * from './functions/${file.replace('.ts', '')}'`)
+    const buff = fs.readFileSync(path.join(FUNCTIONS, file))
+
+    const line = buff.toString().split('\n').slice(-2, -1)[0]
+
+    if (line.match(`// {.*?}`)) {
+      lines.push(
+        `export {${
+          line.match(`// {(.*?)}`)[1]
+        }} from './functions/${file.replace('.ts', '')}'`
+      )
+    } else {
+      if (!line.match(`// exclude`)) {
+        throw new Error(`functions/${file} has no exports`)
+      }
+    }
   })
 
   fs.readdir(CLASSES, (err, files) => {
@@ -23,7 +37,19 @@ fs.readdir(FUNCTIONS, (err, files) => {
         return
       }
 
-      lines.push(`export * from './classes/${file.replace('.ts', '')}'`)
+      const buff = fs.readFileSync(path.join(CLASSES, file))
+
+      const line = buff.toString().split('\n').slice(-2, -1)[0]
+
+      if (line.match(`// {.*?}`)) {
+        lines.push(
+          `export {${
+            line.match(`// {(.*?)}`)[1]
+          }} from './classes/${file.replace('.ts', '')}'`
+        )
+      } else {
+        throw new Error(`classes/${file} has no exports`)
+      }
     })
 
     fs.writeFile(INDEX, lines.join(`\r\n`), err => {})

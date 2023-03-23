@@ -11,3 +11,5 @@ export const parameterize = (slug: string): string => {
     .replace(/[^a-zA-Z0-9 -]/g, '')
     .replace(/\s/g, '-')
 }
+
+// {parameterize}

@@ -23,3 +23,5 @@ export const arrayMove = <T>(
 
   return array as T[]
 }
+
+// {arrayMove}

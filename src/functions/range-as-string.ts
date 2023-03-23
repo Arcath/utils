@@ -48,3 +48,5 @@ export const rangeAsString = (integers: number[]): string[] => {
     return `${range[0]}-${range[1]}`
   })
 }
+
+// {rangeAsString, rangeAsArray}

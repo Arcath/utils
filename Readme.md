@@ -19,3 +19,15 @@ yarn add @arcath/utils
 ## More
 
 A full list of functions and classes can be found at https://utils.arcath.net
+
+## Developing
+
+Each function/class should have its own file with a spec file along side.
+Similar functions can be in the same file e.g. `increment` and `decrement`.
+
+The index is generated using a comment at the bottom of the file to define the
+exports. For example
+
+```js
+// {increment, decrement}
+```

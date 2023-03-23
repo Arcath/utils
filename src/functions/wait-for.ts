@@ -17,3 +17,5 @@ export const waitFor = async <T>(
       return [null, e]
     })
 }
+
+// {waitFor, WaitForResult}

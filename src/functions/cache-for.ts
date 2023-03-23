@@ -104,3 +104,5 @@ export const cacheFor = async <T>(
 
   return cache[key]
 }
+
+// {cacheFor, cacheForSync, expireKey, cacheKey, cacheKeyExists, resetCache, CacheForOptions}

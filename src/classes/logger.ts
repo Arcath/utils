@@ -72,3 +72,5 @@ export class Logger {
     )
   }
 }
+
+// {Logger, LoggerOptions}

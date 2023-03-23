@@ -33,3 +33,5 @@ export const asyncTimes = async <T>(
 
   return asyncMap(numbers, cb)
 }
+
+// {times, asyncTimes}

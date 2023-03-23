@@ -104,3 +104,5 @@ export const parseCDIR = (cdir: string): CIDRObject => {
     size
   }
 }
+
+// {parseCDIR, CIDRObject}

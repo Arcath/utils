@@ -62,3 +62,5 @@ export const reduceFalsy = <T>(
 ) => {
   return reducio(array, (v, i) => !check(v, i), {initial: true})
 }
+
+// {reduceTruthy, reduceFalsy, RedicioOptions, reducio}

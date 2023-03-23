@@ -24,3 +24,5 @@ export const keyValue = <Object extends {}>(
     return {key, value: object[key]}
   })
 }
+
+// {keys, keyValue}

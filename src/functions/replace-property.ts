@@ -19,3 +19,5 @@ export const replaceProperty = <T extends {}, K extends keyof T, P>(
 
   return newObject
 }
+
+// {replaceProperty}

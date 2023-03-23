@@ -22,3 +22,5 @@ export const ifFn = <Argument>(fn: (argument: Argument) => boolean) => {
     return fn(argument) ? truthy : falsy
   }
 }
+
+// {ifFn}

@@ -64,3 +64,5 @@ export const testObjectAddress = <ObjectType extends {[key: string]: any}>(
     {currentObject: object, result: true}
   ).result
 }
+
+// {addressObject, testObjectAddress}

@@ -45,3 +45,5 @@ export function invariant<Condition>(
   const errorMessage = provided ? `${prefix}: ${provided}` : prefix
   throw new Error(errorMessage)
 }
+
+// {invariant, InvariantOptions}

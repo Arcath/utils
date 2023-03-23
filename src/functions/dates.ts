@@ -44,3 +44,5 @@ export const lastModifiedHeaderDate = dateOrStringFunction(date => {
     .toString()
     .padStart(2, '0')} GMT`
 })
+
+// {lastModifiedHeaderDate}

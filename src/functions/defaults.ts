@@ -29,3 +29,5 @@ export const defaults = <T extends {}>(
 
   return result
 }
+
+// {defaults}
