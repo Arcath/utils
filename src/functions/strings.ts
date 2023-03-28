@@ -15,6 +15,11 @@ export const rndFromString = (string: string, base: number = 1) => {
   return Math.round((n - Math.floor(n)) * base)
 }
 
+/**
+ * Inverts alphabetic characters, `abc` becomes `zyx`.
+ *
+ * @param string The string to invert
+ */
 export const invertString = (string: string) => {
   return string
     .split('')
