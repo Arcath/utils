@@ -28,13 +28,19 @@ export const twClassNameFn = (twClasses: string[] | string) => {
       typeof classNames === 'string' ? classNames.split(' ') : classNames
 
     let classesToApply = defaultClasses.map(className => {
-      const [prefix, value] = className.split('-')
+      const parts = className.split('-')
+
+      const value = parts.length > 1 ? parts.pop() : undefined
+      const prefix = parts.join('-')
 
       return {prefix, value, className}
     })
 
     classes.forEach(className => {
-      const [prefix, value] = className.split('-')
+      const parts = className.split('-')
+
+      const value = parts.length > 1 ? parts.pop() : undefined
+      const prefix = parts.join('-')
 
       classesToApply = classesToApply.filter(applicable => {
         return applicable.prefix !== prefix

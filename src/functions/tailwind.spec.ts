@@ -21,4 +21,10 @@ describe('Tailwind', () => {
       'w-full border border-gray-300 rounded xl:p-4 mt-2 mb-4 shadow-xl p-4'
     )
   })
+
+  it('should support multi `-` classes', () => {
+    const gridClasses = twClassNameFn('grid grid-cols-3')
+
+    expect(gridClasses('grid-cols-4')).toBe('grid grid-cols-4')
+  })
 })
