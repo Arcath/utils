@@ -1,3 +1,4 @@
+/* eslint no-bitwise:off */
 export const bitMask = <Bit>(initialValue: number = 0, bits: Bit[] = []) => {
   let value = initialValue
 
@@ -25,11 +26,11 @@ export const bitMask = <Bit>(initialValue: number = 0, bits: Bit[] = []) => {
     return false
   }
 
-  const set = (name: Bit, value: boolean) => {
+  const set = (name: Bit, newValue: boolean) => {
     const index = bits.indexOf(name)
 
     if (index !== -1) {
-      _set(index, value)
+      _set(index, newValue)
     }
   }
 
