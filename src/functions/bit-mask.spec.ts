@@ -1,4 +1,4 @@
-import {BitMask} from './bit-mask'
+import {bitMask} from './bit-mask'
 
 const READ = 'read'
 const WRITE = 'write'
@@ -10,7 +10,7 @@ const Bits: Permission[] = [READ, WRITE, EXECUTE]
 
 describe('BitMask', () => {
   it('should set values', () => {
-    const mask = new BitMask(0, Bits)
+    const mask = bitMask(0, Bits)
 
     expect(mask.get(READ)).toBe(false)
 
@@ -26,7 +26,7 @@ describe('BitMask', () => {
   })
 
   it('should work with arrays', () => {
-    const mask = new BitMask(0, Bits)
+    const mask = bitMask(0, Bits)
 
     expect(mask.asArray()).toHaveLength(0)
 
@@ -35,7 +35,7 @@ describe('BitMask', () => {
     expect(mask.asArray()).toHaveLength(1)
     expect(mask.asIndexArray()).toStrictEqual([0])
 
-    const mask2 = new BitMask(0, Bits)
+    const mask2 = bitMask(0, Bits)
 
     mask2.fromIndexArray([1])
 
@@ -44,15 +44,15 @@ describe('BitMask', () => {
   })
 
   it('should have default values', () => {
-    const mask = new BitMask()
+    const mask = bitMask()
 
-    expect(mask.value).toBe(0)
+    expect(mask.value()).toBe(0)
 
     //eslint-disable-next-line
     expect((mask as any).get('test')).toBe(false)
 
     //eslint-disable-next-line
     ;(mask as any).set('test')
-    expect(mask.value).toBe(0)
+    expect(mask.value()).toBe(0)
   })
 })
