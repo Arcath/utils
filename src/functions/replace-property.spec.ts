@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {replaceProperty} from './replace-property'
 
 describe('Replace Property', () => {

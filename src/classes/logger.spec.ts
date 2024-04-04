@@ -1,12 +1,12 @@
 /* eslint no-control-regex:off */
 // eslint-disable-next-line
-import {jest} from '@jest/globals'
+import {expect, it, describe, vi} from 'vitest'
 
 import {Logger} from './logger'
 
 describe('Logger', () => {
   it('should log messages', () => {
-    console.log = jest.fn()
+    console.log = vi.fn()
 
     const logger = new Logger()
 
@@ -35,7 +35,7 @@ describe('Logger', () => {
   })
 
   it('should set a service name', () => {
-    console.log = jest.fn()
+    console.log = vi.fn()
 
     const testLogger = new Logger('Service')
 

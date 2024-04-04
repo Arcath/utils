@@ -1,6 +1,7 @@
 /* eslint jest/no-conditional-in-test:off */
 /* eslint jest/no-conditional-expect:off */
 
+import {expect, it, describe} from 'vitest'
 import {increment, decrement} from './increment'
 
 describe('Increment', () => {

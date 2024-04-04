@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {groupedBy} from './grouped-by'
 
 describe('Grouped By', () => {

@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {asyncForEach} from './async-for-each'
 
 describe('Async For Each (in sequence)', () => {

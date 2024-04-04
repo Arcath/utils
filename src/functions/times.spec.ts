@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {times, asyncTimes} from './times'
 
 describe('Times', () => {

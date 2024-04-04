@@ -8,9 +8,11 @@ export const asyncForEach = async <T>(
   array: T[],
   itterator: (value: T, index: number, array: T[]) => Promise<void>
 ): Promise<void> => {
-  const promises = array.map((value, index, arr) =>
-    itterator(value, index, arr)
-  )
+  const promises = array.map((value, index, arr) => {
+    const promise = itterator(value, index, arr)
+
+    return promise
+  })
 
   await Promise.all(promises)
 }

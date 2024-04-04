@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {indexedBy} from './indexed-by'
 
 describe('Indexed By', () => {

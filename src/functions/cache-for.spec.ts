@@ -1,5 +1,4 @@
-// eslint-disable-next-line
-import {jest} from '@jest/globals'
+import {expect, test, describe, vi} from 'vitest'
 
 import {
   cacheForSync,
@@ -10,10 +9,8 @@ import {
   cacheKeyExists
 } from './cache-for'
 
-jest.setTimeout(20000)
-
 describe('Cache For', () => {
-  it('should cache a value syncronously', async () => {
+  test('should cache a value syncronously', async () => {
     const key = 'test'
     let n = 1
 
@@ -43,7 +40,7 @@ describe('Cache For', () => {
     })
   })
 
-  it('should cache a value asyncrousnly', async () => {
+  test('should cache a value asyncrousnly', async () => {
     const key = 'testing'
     let n = 1
 
@@ -73,13 +70,13 @@ describe('Cache For', () => {
     })
   })
 
-  it('should accept a default duration', () => {
+  test('should accept a default duration', () => {
     const value = cacheForSync({key: 'tested'}, () => 'test')
 
     expect(value).toBe('test')
   })
 
-  it('should support durationless caching', () => {
+  test('should support durationless caching', () => {
     const value = () => {
       return Math.random()
     }
@@ -99,8 +96,8 @@ describe('Cache For', () => {
     expect(cacheKeyExists('no-duration')).toBe(false)
   })
 
-  it('should only run the function once', () => {
-    const mockFn = jest.fn().mockReturnValue(10)
+  test('should only run the function once', () => {
+    const mockFn = vi.fn().mockReturnValue(10)
 
     cacheKey('no-calls', () => mockFn())
 

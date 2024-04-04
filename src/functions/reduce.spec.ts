@@ -1,9 +1,10 @@
 // eslint-disable-next-line
-import {jest} from '@jest/globals'
-
+import {expect, it, describe, vi} from 'vitest'
 import {reduceTruthy, reduceFalsy, reducio} from './reduce'
 
 describe('Reduce Functions', () => {
+  const returnInput = (e: boolean) => e
+
   it('should reduce truthy', () => {
     expect(reduceTruthy([true, true, false, true], e => e)).toBeFalsy()
     expect(reduceTruthy([true, true, true, true], e => e)).toBeTruthy()
@@ -12,7 +13,7 @@ describe('Reduce Functions', () => {
 
   it('should only call the check function until it hits a false', () => {
     // eslint-disable-next-line
-    const check = jest.fn<(e: boolean) => boolean>(e => e)
+    const check = vi.fn().mockImplementation(returnInput)
 
     reduceTruthy([true, true, false, true, true, true, false, true], check)
 
@@ -32,7 +33,7 @@ describe('Reduce Functions', () => {
     ).toBeFalsy()
 
     // eslint-disable-next-line
-    const check = jest.fn<(e: boolean) => boolean>(e => e)
+    const check = vi.fn().mockImplementation(returnInput)
 
     expect(reducio([true, true, false, false, true], check)).toBeTruthy()
 

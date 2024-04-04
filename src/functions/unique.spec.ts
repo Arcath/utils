@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {unique} from './unique'
 
 describe('Unique', () => {

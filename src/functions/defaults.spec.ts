@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {defaults} from './defaults'
 
 describe('Defaults', () => {

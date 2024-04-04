@@ -1,7 +1,8 @@
+import {expect, test, describe} from 'vitest'
 import {arrayMove} from './array-move'
 
 describe('Array Move', () => {
-  it('should move objects in an array', () => {
+  test('should move objects in an array', () => {
     const a = [1, 2, 3, 4, 5, 6]
 
     const b = arrayMove(a, 1, 2)

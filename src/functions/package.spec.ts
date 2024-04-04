@@ -1,6 +1,8 @@
 /* eslint @typescript-eslint/no-shadow:off */
 import path from 'path'
 
+import {expect, it, describe} from 'vitest'
+
 import {
   getPackage,
   hasDependency,
@@ -36,9 +38,9 @@ describe('Package Fns', () => {
 
     expect(hasDependency('read-pkg-up')).toBeTruthy()
     expect(hasDependency('electron')).toBeFalsy()
-    expect(hasDevDependency('jest')).toBeTruthy()
+    expect(hasDevDependency('vitest')).toBeTruthy()
     expect(hasPeerDependency('esbuild')).toBeFalsy()
-    expect(hasAnyDependency('jest')).toBeTruthy()
+    expect(hasAnyDependency('vitest')).toBeTruthy()
     expect(ifDependency('read-pkg-up', 'pass', 'fail')).toBe('pass')
     expect(ifDevDependency('read-pkg-up', 'pass', 'fail')).toBe('fail')
     expect(ifPeerDependency('read-pkg-up', 'pass', 'fail')).toBe('fail')

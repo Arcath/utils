@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {twClassNameFn} from './tailwind'
 
 describe('Tailwind', () => {

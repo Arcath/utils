@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {isEnv} from './is-env'
 
 describe('isEnv', () => {

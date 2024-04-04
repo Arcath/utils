@@ -4,8 +4,10 @@
     "isolatedModules": false,
     "outDir": "./lib",
     "noEmit": false,
-    "target": "es6",
-    "declaration": true
+    "target": "ES2022",
+    "module": "commonjs",
+    "declaration": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
   "exclude": ["lib", "node_modules", "src/**/*.spec.ts", "src/**/*.spec.tsx"]

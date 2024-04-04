@@ -1,3 +1,4 @@
+import {expect, test, describe} from 'vitest'
 import {bitMask} from './bit-mask'
 
 const READ = 'read'
@@ -9,7 +10,7 @@ type Permission = typeof EXECUTE | typeof READ | typeof WRITE
 const Bits: Permission[] = [READ, WRITE, EXECUTE]
 
 describe('BitMask', () => {
-  it('should set values', () => {
+  test('should set values', () => {
     const mask = bitMask(0, Bits)
 
     expect(mask.get(READ)).toBe(false)
@@ -25,7 +26,7 @@ describe('BitMask', () => {
     expect(mask.get(READ)).toBe(false)
   })
 
-  it('should work with arrays', () => {
+  test('should work with arrays', () => {
     const mask = bitMask(0, Bits)
 
     expect(mask.asArray()).toHaveLength(0)
@@ -43,7 +44,7 @@ describe('BitMask', () => {
     expect(mask2.get(READ)).toBe(false)
   })
 
-  it('should have default values', () => {
+  test('should have default values', () => {
     const mask = bitMask()
 
     expect(mask.value()).toBe(0)

@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {mapProperty} from './map-property'
 
 describe('Map Property', () => {

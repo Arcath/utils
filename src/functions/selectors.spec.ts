@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {propIs, propIsNot} from './selectors'
 
 describe('Selectors', () => {

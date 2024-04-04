@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {waitFor} from './wait-for'
 
 describe('waitFor', () => {

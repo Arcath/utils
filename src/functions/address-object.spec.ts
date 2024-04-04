@@ -1,7 +1,8 @@
+import {expect, test, describe} from 'vitest'
 import {addressObject, testObjectAddress} from './address-object'
 
 describe('Address Object', () => {
-  it('should address an object', () => {
+  test('should address an object', () => {
     const object = {
       level1: {
         level2: {

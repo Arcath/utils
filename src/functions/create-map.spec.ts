@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {createMap} from './create-map'
 
 describe('Create Map', () => {

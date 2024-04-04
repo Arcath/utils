@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {diffArray} from './diff-array'
 
 describe('diffArray', () => {

@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {rndFromString, invertString} from './strings'
 
 describe('Strings', () => {

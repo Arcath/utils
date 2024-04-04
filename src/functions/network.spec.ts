@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {parseCDIR} from './network'
 
 describe('Network', () => {

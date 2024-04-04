@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {clamp} from './clamp'
 
 describe('clamp', () => {

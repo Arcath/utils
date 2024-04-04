@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {lastModifiedHeaderDate} from './dates'
 
 describe('Dates', () => {

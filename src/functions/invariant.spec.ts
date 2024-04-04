@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {expectTypeOf} from 'expect-type'
 
 import {invariant} from './invariant'

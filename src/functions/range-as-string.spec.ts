@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {rangeAsString, rangeAsArray} from './range-as-string'
 
 describe('Range As String', () => {

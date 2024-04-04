@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {ifFn} from './if-fn'
 import {hasDevDependency} from './package'
 

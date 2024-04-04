@@ -1,7 +1,8 @@
+import {expect, it, describe} from 'vitest'
 import {deepIncludesArray} from './deep-includes'
 
 describe('Deep Includes', () => {
-  test('it should return the correct value', () => {
+  it('should return the correct value', () => {
     const array = [
       [1, 'two', 3],
       [4, 'five', 6],

@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {pick, omit} from './pick'
 
 describe('Pick & Omit', () => {

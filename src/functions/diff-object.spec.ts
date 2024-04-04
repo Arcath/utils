@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {diffObject} from './diff-object'
 
 describe('Diff Object', () => {

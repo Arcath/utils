@@ -1,3 +1,4 @@
+import {expect, it, describe} from 'vitest'
 import {nl2br} from './nl2br'
 
 describe('NL2BR', () => {
